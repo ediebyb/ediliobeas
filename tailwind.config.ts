@@ -6,10 +6,10 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary:   '#1E40AF',
-          secondary: '#0EA5E9',
-          accent:    '#F59E0B',
-          dark:      '#0F172A',
+          primary:   '#05121F',
+          secondary: '#0F2436',
+          accent:    '#C5A059',
+          dark:      '#05121F',
           light:     '#F8FAFC',
         },
         whatsapp: '#25D366',

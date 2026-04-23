@@ -85,11 +85,11 @@ export default function Carousel() {
             })()}
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-4">
+          <h2 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight tracking-tight mb-6">
             {slides[currentIndex].title}
           </h2>
 
-          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             {slides[currentIndex].subtitle}
           </p>
 

@@ -28,15 +28,15 @@ export default function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-md'
-          : 'bg-transparent'
+          ? 'bg-[#05121F]/80 backdrop-blur-md border-b border-white/10'
+          : 'bg-[#05121F]/80 backdrop-blur-md border-b border-white/10'
       }`}
     >
       <nav
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         aria-label="Navegación principal"
       >
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo / Marca */}
           <a
             href="#inicio"
@@ -47,7 +47,7 @@ export default function Navigation() {
             <img
               src="/logo.png"
               alt="Edilio Beas Logo"
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </a>
 
@@ -58,7 +58,7 @@ export default function Navigation() {
                 <a
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-brand-dark hover:text-brand-primary font-medium transition-colors duration-200 text-sm"
+                  className="text-white hover:text-[#C5A059] font-medium transition-colors duration-200 text-sm"
                 >
                   {link.label}
                 </a>
@@ -70,7 +70,7 @@ export default function Navigation() {
           <a
             href="#contacto"
             onClick={(e) => handleNavClick(e, '#contacto')}
-            className="hidden md:inline-flex items-center px-4 py-2 bg-brand-accent text-white text-sm font-semibold rounded-lg hover:bg-amber-600 transition-colors duration-200"
+            className="hidden md:inline-flex items-center px-6 py-3 bg-[#C5A059] text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[#C5A059]/30 transition-all duration-200"
           >
             Agenda tu consultoría
           </a>
@@ -78,7 +78,7 @@ export default function Navigation() {
           {/* Botón hamburguesa */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-md text-brand-dark hover:text-brand-primary hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-md text-white hover:text-[#C5A059] hover:bg-white/10 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -97,7 +97,7 @@ export default function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden overflow-hidden bg-white border-t border-gray-100"
+              className="md:hidden overflow-hidden bg-[#05121F]/95 backdrop-blur-md border-t border-white/10"
             >
               <ul className="py-2 space-y-1" role="list">
                 {NAV_LINKS.map((link) => (
@@ -105,7 +105,7 @@ export default function Navigation() {
                     <a
                       href={link.href}
                       onClick={(e) => handleNavClick(e, link.href)}
-                      className="block px-4 py-3 text-brand-dark hover:text-brand-primary hover:bg-gray-50 font-medium transition-colors duration-200"
+                      className="block px-4 py-3 text-white hover:text-[#C5A059] hover:bg-white/10 font-medium transition-colors duration-200"
                     >
                       {link.label}
                     </a>
@@ -115,7 +115,7 @@ export default function Navigation() {
                   <a
                     href="#contacto"
                     onClick={(e) => handleNavClick(e, '#contacto')}
-                    className="block w-full text-center px-4 py-2 bg-brand-accent text-white text-sm font-semibold rounded-lg hover:bg-amber-600 transition-colors duration-200"
+                    className="block w-full text-center px-4 py-3 bg-[#C5A059] text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[#C5A059]/30 transition-all duration-200"
                   >
                     Agenda tu consultoría
                   </a>
