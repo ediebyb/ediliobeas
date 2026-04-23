@@ -58,6 +58,15 @@ export default function AboutSection() {
               Sobre mí
             </motion.span>
 
+            {/* Logo para generar confianza */}
+            <motion.div variants={fadeInUp} className="mb-4">
+              <img
+                src="/logo 1.png"
+                alt="Edilio Beas - Consultor PyME"
+                className="h-16 w-auto"
+              />
+            </motion.div>
+
             <motion.h2
               id="about-heading"
               variants={fadeInUp}
