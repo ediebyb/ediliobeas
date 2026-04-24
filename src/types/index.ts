@@ -4,19 +4,25 @@ export interface Service {
   id: string
   icon: ComponentType<{ size?: number | string; className?: string }>
   title: string
-  shortDescription: string
-  price: string
-  priceNote?: string
-  cta: string
-  image: string
-  fullDetails: {
-    description: string
-    features: string[]
-    deliverables: string[]
-    timeline: string
-    ctaFinal: string
+  problem: string
+  executiveSummary: string
+  fullDescription: string
+  features: string[]
+  pricing: {
+    optimization?: string
+    creation?: string
+    landing?: string
+    ecommerce?: string
+    basic?: string
+    process?: string
+    session?: string
+    note: string
   }
+  timeline: string
+  deliverables: string[]
   note?: string
+  image: string
+  cta: string
 }
 
 export interface Testimonial {
@@ -30,6 +36,7 @@ export interface Testimonial {
 export interface CredentialStat {
   value: string
   label: string
+  description?: string
 }
 
 export interface NavLink {

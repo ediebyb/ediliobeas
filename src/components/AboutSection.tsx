@@ -1,10 +1,28 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar } from 'lucide-react'
+import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react'
 import { STATS, BIO } from '@/data/about'
 import { staggerContainer, fadeInUp, slideInLeft } from '@/utils/animations'
 import { SETMORE_LINK } from '@/data/setmore'
 
 export default function AboutSection() {
+  const [statsIndex, setStatsIndex] = useState(0)
+
+  const nextStats = () => {
+    setStatsIndex((prev) => (prev + 3) % STATS.length)
+  }
+
+  const prevStats = () => {
+    setStatsIndex((prev) => (prev - 3 + STATS.length) % STATS.length)
+  }
+
+  const getCurrentStats = () => {
+    const result = []
+    for (let i = 0; i < 3; i++) {
+      result.push(STATS[(statsIndex + i) % STATS.length])
+    }
+    return result
+  }
 
   return (
     <section
@@ -81,17 +99,69 @@ export default function AboutSection() {
               ))}
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats - Desktop carousel (3 at a time) */}
+            <motion.div variants={fadeInUp} className="hidden md:block">
+              <div className="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-100">
+                {getCurrentStats().map((stat) => (
+                  <div key={`${stat.label}-${statsIndex}`} className="text-center">
+                    <div className="text-2xl sm:text-3xl font-heading font-bold text-brand-primary">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs sm:text-sm text-gray-500 mt-1">{stat.label}</div>
+                    {stat.description && (
+                      <div className="text-xs text-gray-400 mt-1">{stat.description}</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              {/* Navigation */}
+              <div className="flex items-center justify-center gap-4 mt-4">
+                <button
+                  type="button"
+                  onClick={prevStats}
+                  className="p-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+                  aria-label="Estadísticas anteriores"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <div className="flex gap-2">
+                  {[0, 1].map((i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setStatsIndex(i * 3)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        statsIndex === i * 3 ? 'bg-brand-primary w-4' : 'bg-gray-300'
+                      }`}
+                      aria-label={`Ver estadísticas ${i + 1}`}
+                    />
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={nextStats}
+                  className="p-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+                  aria-label="Siguientes estadísticas"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Stats - Mobile (show all 6 in 2 rows) */}
             <motion.div
               variants={fadeInUp}
-              className="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-100"
+              className="md:hidden grid grid-cols-2 gap-4 py-6 border-t border-b border-gray-100"
             >
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="text-2xl sm:text-3xl font-heading font-bold text-brand-primary">
+                  <div className="text-2xl font-heading font-bold text-brand-primary">
                     {stat.value}
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-500 mt-1">{stat.label}</div>
+                  <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
+                  {stat.description && (
+                    <div className="text-xs text-gray-400 mt-1 line-clamp-2">{stat.description}</div>
+                  )}
                 </div>
               ))}
             </motion.div>

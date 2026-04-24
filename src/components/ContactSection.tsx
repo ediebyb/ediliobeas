@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter, Youtube, Facebook, MessageCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Instagram, Youtube, Facebook, MessageCircle, MessageSquare, Music, X } from 'lucide-react'
 
 import { staggerContainer, fadeInUp, slideInLeft, slideInRight } from '@/utils/animations'
 
@@ -206,33 +206,13 @@ export default function ContactSection() {
 
             </div>
 
-            {/* Sección de Redes Sociales - 2 filas */}
+            {/* Sección de Redes Sociales - 9 iconos */}
 
             <div className="mt-8">
 
               <h4 className="text-[#05121F] font-semibold mb-4">Sígueme en:</h4>
 
-              {/* Primera fila - Redes principales */}
-
-              <div className="grid grid-cols-4 gap-4 mb-4">
-
-                <a
-
-                  href="https://linkedin.com/in/ediliobeas"
-
-                  target="_blank"
-
-                  rel="noopener noreferrer"
-
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
-
-                  aria-label="LinkedIn"
-
-                >
-
-                  <Linkedin className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
-
-                </a>
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
 
                 <a
 
@@ -242,73 +222,35 @@ export default function ContactSection() {
 
                   rel="noopener noreferrer"
 
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
 
                   aria-label="Instagram"
 
                 >
 
-                  <Instagram className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
+                  <Instagram className={`w-6 h-6 text-gray-600 hover:text-[#E4405F] transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">Instagram</span>
 
                 </a>
 
                 <a
 
-                  href="https://twitter.com/ediliobeas"
+                  href="https://threads.net/@ediliobeas"
 
                   target="_blank"
 
                   rel="noopener noreferrer"
 
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
 
-                  aria-label="Twitter/X"
-
-                >
-
-                  <Twitter className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
-
-                </a>
-
-                <a
-
-                  href="https://youtube.com/@ediliobeas"
-
-                  target="_blank"
-
-                  rel="noopener noreferrer"
-
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
-
-                  aria-label="YouTube"
+                  aria-label="Threads"
 
                 >
 
-                  <Youtube className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
+                  <MessageSquare className={`w-6 h-6 text-gray-600 hover:text-black transition-colors`} />
 
-                </a>
-
-              </div>
-
-              {/* Segunda fila - Redes adicionales */}
-
-              <div className="grid grid-cols-4 gap-4">
-
-                <a
-
-                  href="https://facebook.com/ediliobeas"
-
-                  target="_blank"
-
-                  rel="noopener noreferrer"
-
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
-
-                  aria-label="Facebook"
-
-                >
-
-                  <Facebook className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">Threads</span>
 
                 </a>
 
@@ -320,13 +262,95 @@ export default function ContactSection() {
 
                   rel="noopener noreferrer"
 
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
 
                   aria-label="TikTok"
 
                 >
 
-                  <MessageCircle className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
+                  <Music className={`w-6 h-6 text-gray-600 hover:text-black transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">TikTok</span>
+
+                </a>
+
+                <a
+
+                  href="https://twitter.com/ediliobeas"
+
+                  target="_blank"
+
+                  rel="noopener noreferrer"
+
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
+
+                  aria-label="X (Twitter)"
+
+                >
+
+                  <X className={`w-6 h-6 text-gray-600 hover:text-black transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">X (Twitter)</span>
+
+                </a>
+
+                <a
+
+                  href="https://linkedin.com/in/ediliobeas"
+
+                  target="_blank"
+
+                  rel="noopener noreferrer"
+
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
+
+                  aria-label="LinkedIn"
+
+                >
+
+                  <Linkedin className={`w-6 h-6 text-gray-600 hover:text-[#0077B5] transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">LinkedIn</span>
+
+                </a>
+
+                <a
+
+                  href="https://youtube.com/@ediliobeas"
+
+                  target="_blank"
+
+                  rel="noopener noreferrer"
+
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
+
+                  aria-label="YouTube"
+
+                >
+
+                  <Youtube className={`w-6 h-6 text-gray-600 hover:text-[#FF0000] transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">YouTube</span>
+
+                </a>
+
+                <a
+
+                  href="https://facebook.com/ediliobeas"
+
+                  target="_blank"
+
+                  rel="noopener noreferrer"
+
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
+
+                  aria-label="Facebook"
+
+                >
+
+                  <Facebook className={`w-6 h-6 text-gray-600 hover:text-[#1877F2] transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">Facebook</span>
 
                 </a>
 
@@ -338,13 +362,15 @@ export default function ContactSection() {
 
                   rel="noopener noreferrer"
 
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
 
                   aria-label="WhatsApp"
 
                 >
 
-                  <Phone className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
+                  <MessageCircle className={`w-6 h-6 text-gray-600 hover:text-[#25D366] transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">WhatsApp</span>
 
                 </a>
 
@@ -352,13 +378,15 @@ export default function ContactSection() {
 
                   href="mailto:edilio@ediliobeas.com"
 
-                  className="flex items-center justify-center p-4 bg-white border border-gray-200 rounded-lg hover:border-[#C5A059] hover:shadow-lg transition-all group"
+                  className="flex flex-col items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-[#D4AF6A] hover:shadow-lg transition-all group"
 
                   aria-label="Email"
 
                 >
 
-                  <Mail className="w-6 h-6 text-gray-600 group-hover:text-[#C5A059] transition-colors" />
+                  <Mail className={`w-6 h-6 text-gray-600 hover:text-[#D4AF6A] transition-colors`} />
+
+                  <span className="text-xs text-gray-600 group-hover:text-[#05121F]">Email</span>
 
                 </a>
 

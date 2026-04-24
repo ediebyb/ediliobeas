@@ -6,175 +6,180 @@ export const SERVICES: Service[] = [
     id: 'google-maps',
     icon: MapPin,
     title: 'Optimización/Creación de Perfil Google Mi Negocio',
-    shortDescription: 'Aparece primero en Google Maps y captación local. Tu negocio visible para quienes más te buscan.',
-    price: '$270.000 CLP (Optimización) / $300.000 CLP (Creación)',
-    priceNote: '* Precios no incluyen IVA',
-    cta: 'Ver más',
-    image: '/google maps.png',
-    fullDetails: {
-      description: 'Posiciona tu negocio en los primeros resultados de Google Maps y búsquedas locales. Optimización SEO avanzada con verificación, estrategia de reseñas y contenido visual profesional.',
-      features: [
-        '✓ Optimización SEO local avanzada con verificación',
-        '✓ Estrategia de reseñas que generan confianza',
-        '✓ Fotografías profesionales y optimizadas',
-        '✓ Estrategia de posicionamiento en Google Maps',
-        '✓ Aumento del 150% en llamadas y mensajes en 60 días',
-        '✓ Reportes mensuales de visibilidad y rendimiento',
-      ],
-      deliverables: [
-        'Perfil completamente optimizado y verificado',
-        'Estrategia de keywords locales',
-        'Galería de fotos profesionales',
-        'Plan de reseñas mensual',
-      ],
-      timeline: '2-3 semanas',
-      ctaFinal: 'Quiero aparecer en Google',
+    problem: '¿Tu negocio no aparece cuando te buscan en Google?',
+    executiveSummary: 'Posiciona tu negocio en los primeros resultados de Google Maps. Optimización SEO local avanzada que aumenta llamadas y visitas en 60 días. Ideal para negocios locales que quieren destacar frente a su competencia.',
+    fullDescription: 'Servicio completo de optimización y creación de perfiles Google Mi Negocio. Implementamos estrategias SEO locales avanzadas, gestión de reseñas y contenido visual profesional para maximizar tu visibilidad en búsquedas locales.',
+    features: [
+      '✓ Optimización SEO local con verificación completa',
+      '✓ Estrategia de reseñas que generan confianza',
+      '✓ Fotografías profesionales optimizadas',
+      '✓ Publicación semanal de contenido',
+      '✓ Reportes mensuales de rendimiento',
+      '✓ Soporte continuo y actualizaciones'
+    ],
+    pricing: {
+      optimization: '$270.000 CLP',
+      creation: '$300.000 CLP',
+      note: 'Precio no incluye impuestos'
     },
+    timeline: '2-3 semanas',
+    deliverables: [
+      'Perfil 100% optimizado y verificado',
+      'Estrategia de keywords locales',
+      'Galería de 10+ fotos profesionales',
+      'Plan de contenido mensual'
+    ],
+    image: '/google maps.png',
+    cta: 'Ver más →'
   },
   {
     id: 'paginas-web',
     icon: Globe,
     title: 'Creación de Páginas Web con/sin carrito de compra',
-    shortDescription: 'Tu web = Tu mejor vendedor 24/7. Diseño profesional + velocidad + SEO = más clientes.',
-    price: '$570.000 CLP (Landing Page) / Desde $970.000 CLP (eCommerce)',
-    priceNote: '* Precios no incluyen IVA. Dominio y hosting no incluidos.',
-    cta: 'Ver más',
-    image: '/pag web.png',
-    fullDetails: {
-      description: 'Desarrollo de páginas web profesionales, rápidas y optimizadas para SEO. Desde landing pages hasta eCommerce completos con pasarela de pagos. Tu negocio abierto 24/7 generando ventas automáticas.',
-      features: [
-        '✓ Diseño profesional responsive (móvil perfecto)',
-        '✓ Optimización SEO técnica y de velocidad',
-        '✓ Integración con WhatsApp y formularios de contacto',
-        '✓ eCommerce con carrito y pasarela de pagos (Webpay, PayPal, etc.)',
-        '✓ Panel autoadministrable fácil de usar',
-        '✓ Entrega en 2-3 semanas garantizado',
-      ],
-      deliverables: [
-        'Diseño personalizado y único',
-        'Optimización completa SEO',
-        'Integración de analytics',
-        'Capacitación de uso',
-      ],
-      timeline: '2-4 semanas según complejidad',
-      ctaFinal: 'Necesito mi web profesional',
+    problem: '¿Sin web profesional o tu web actual no vende?',
+    executiveSummary: 'Desarrollo de páginas web profesionales, rápidas y optimizadas para SEO. Desde landing pages hasta eCommerce completos. Tu negocio abierto 24/7 generando ventas automáticas mientras duermes.',
+    fullDescription: 'Diseño y desarrollo de sitios web profesionales con las últimas tecnologías. Incluimos optimización SEO, velocidad de carga optimizada, diseño responsive perfecto en móviles y integración con herramientas de marketing y ventas.',
+    features: [
+      '✓ Diseño profesional 100% responsive',
+      '✓ Optimización SEO técnica completa',
+      '✓ Velocidad de carga optimizada (<3s)',
+      '✓ Integración WhatsApp y formularios',
+      '✓ eCommerce con pasarela de pagos',
+      '✓ Panel autoadministrable intuitivo'
+    ],
+    pricing: {
+      landing: '$570.000 CLP',
+      ecommerce: 'Desde $970.000 CLP',
+      note: 'Precio no incluye impuestos. Dominio y hosting no incluidos.'
     },
+    timeline: '2-4 semanas',
+    deliverables: [
+      'Diseño personalizado único',
+      'Optimización SEO completa',
+      'Integración Google Analytics',
+      'Capacitación de uso incluida',
+      '30 días de soporte gratuito'
+    ],
+    image: '/pag web.png',
+    cta: 'Ver más →'
   },
   {
     id: 'app-movil',
     icon: Smartphone,
     title: 'Desarrollo de Aplicación Móvil',
-    shortDescription: 'Lleva tu negocio al bolsillo de tus clientes. Apps Android que venden y fidelizan.',
-    price: 'Desde $1.700.000 CLP',
-    priceNote: '* Precios no incluyen IVA. Costo final según funcionalidades.',
-    cta: 'Ver más',
-    image: '/app.png',
-    fullDetails: {
-      description: 'Desarrollo de aplicaciones móviles nativas Android para funciones específicas de venta, vitrina de productos, pagos o CRM. Aumenta la retención y ventas con una app profesional en el celular de tus clientes.',
-      features: [
-        '✓ App nativa Android de alto rendimiento',
-        '✓ Vitrina de productos/servicios interactiva',
-        '✓ Integración con pasarelas de pago móvil',
-        '✓ CRM móvil para gestión de clientes',
-        '✓ Notificaciones push para engagement',
-        '✓ Publicación en Google Play Store',
-      ],
-      deliverables: [
-        'App funcional y testeada',
-        'Diseño UX/UI profesional',
-        'Integración con backend',
-        'Soporte post-lanzamiento',
-      ],
-      timeline: '6-10 semanas',
-      ctaFinal: 'Quiero mi app móvil',
+    problem: '¿Tus clientes necesitan una app para comprarte?',
+    executiveSummary: 'Apps Android nativas que venden y fidelizan. Lleva tu negocio al bolsillo de tus clientes con una aplicación profesional, rápida y fácil de usar que aumenta la retención y ventas recurrentes.',
+    fullDescription: 'Desarrollo de aplicaciones móviles nativas Android para funciones específicas: vitrina de productos, pagos, CRM o gestión de clientes. Incluye notificaciones push, integración con backend y publicación en Play Store.',
+    features: [
+      '✓ App nativa Android alto rendimiento',
+      '✓ Vitrina de productos interactiva',
+      '✓ Pasarela de pagos móvil integrada',
+      '✓ CRM móvil para gestión clientes',
+      '✓ Notificaciones push engagement',
+      '✓ Publicación en Google Play Store'
+    ],
+    pricing: {
+      basic: 'Desde $1.700.000 CLP',
+      note: 'Precio no incluye impuestos. Costo final según funcionalidades.'
     },
+    timeline: '6-10 semanas',
+    deliverables: [
+      'App funcional y testeada',
+      'Diseño UX/UI profesional',
+      'Integración backend completa',
+      'Soporte 3 meses post-lanzamiento',
+      'Manual de usuario'
+    ],
+    image: '/app.png',
+    cta: 'Ver más →'
   },
   {
     id: 'google-sheet',
     icon: FileSpreadsheet,
     title: 'Desarrollo de Flujo de Trabajo Automatizado en Google Sheet',
-    shortDescription: 'Elimina el trabajo manual repetitivo. Automatiza procesos y recupera 15+ horas semanales.',
-    price: '$270.000 CLP por proceso',
-    priceNote: '* Precios no incluyen IVA',
-    cta: 'Ver más',
-    image: '/sheet.png',
-    fullDetails: {
-      description: 'Digitaliza procesos repetitivos que quitan tiempo y generan errores. Automatización con Google Apps Script que soluciona problemas de gestión, trazabilidad, eficiencia y almacenamiento de datos. Informes automáticos para toma de decisiones.',
-      features: [
-        '✓ Automatización de reportes y emails',
-        '✓ Integración entre Forms, Sheets, Gmail y Calendar',
-        '✓ Dashboards automáticos en tiempo real',
-        '✓ Workflows avanzados con Google Apps Script',
-        '✓ Cero errores humanos en tus datos',
-        '✓ Informes ejecutivos automáticos',
-      ],
-      deliverables: [
-        'Proceso completamente automatizado',
-        'Documentación del sistema',
-        'Capacitación de uso',
-        'Soporte técnico incluido',
-      ],
-      timeline: '2-3 semanas por proceso',
-      ctaFinal: 'Quiero automatizar mi negocio',
+    problem: '¿Pierdes horas en tareas manuales repetitivas?',
+    executiveSummary: 'Automatiza procesos que quitan tiempo y generan errores. Workflows avanzados con Google Apps Script que recuperan 15+ horas semanales y eliminan errores humanos en tus datos.',
+    fullDescription: 'Digitalización y automatización de procesos repetitivos mediante Google Apps Script. Creamos sistemas inteligentes que generan reportes automáticos, integran herramientas y proporcionan dashboards en tiempo real para toma de decisiones.',
+    features: [
+      '✓ Automatización reportes y emails',
+      '✓ Integración Forms, Sheets, Gmail',
+      '✓ Dashboards automáticos tiempo real',
+      '✓ Workflows avanzados Apps Script',
+      '✓ Cero errores manuales',
+      '✓ Informes ejecutivos automáticos'
+    ],
+    pricing: {
+      process: '$270.000 CLP por proceso',
+      note: 'Precio no incluye impuestos'
     },
+    timeline: '2-3 semanas por proceso',
+    deliverables: [
+      'Proceso 100% automatizado',
+      'Documentación del sistema',
+      'Capacitación de uso',
+      'Soporte técnico 1 mes'
+    ],
+    image: '/sheet.png',
+    cta: 'Ver más →'
   },
   {
     id: 'erp',
     icon: Database,
     title: 'Desarrollo de Sistemas de Gestión Comercial ERP',
-    shortDescription: 'Orden total en tu operación. Software a medida que integra ventas, inventario y finanzas.',
-    price: 'Desde $3.700.000 CLP',
-    priceNote: '* Precios no incluyen IVA. Inversión única, sin mensualidades.',
-    cta: 'Ver más',
-    image: '/erp.png',
-    fullDetails: {
-      description: 'Software de gestión y control comercial diseñado 100% a medida de tus necesidades. Integra ventas, inventario, contabilidad y operaciones en una sola plataforma. Inversión única, sin mensualidades.',
-      features: [
-        '✓ Módulos de ventas, inventario y contabilidad',
-        '✓ Personalización total según necesidades',
-        '✓ Migración de datos desde sistemas actuales',
-        '✓ Reportes y analytics en tiempo real',
-        '✓ Multiusuario y multi-sucursal',
-        '✓ Soporte y actualizaciones incluidas',
-      ],
-      deliverables: [
-        'Sistema ERP completamente funcional',
-        'Capacitación a todo el equipo',
-        'Documentación técnica',
-        'Soporte post-implementación 3 meses',
-      ],
-      timeline: '8-12 semanas',
-      ctaFinal: 'Quiero ordenar mi operación',
+    problem: '¿Caos operativo con Excel y sistemas separados?',
+    executiveSummary: 'Software ERP a medida que integra ventas, inventario y finanzas en una sola plataforma. Orden total en tu operación con inversión única, sin mensualidades eternas.',
+    fullDescription: 'Sistema de gestión comercial diseñado 100% a medida de tus necesidades. Integra todas las áreas de tu negocio: ventas, inventario, contabilidad y operaciones en una plataforma unificada con reportes en tiempo real.',
+    features: [
+      '✓ Módulos ventas, inventario, contabilidad',
+      '✓ Personalización total necesidades',
+      '✓ Migración datos sistemas actuales',
+      '✓ Reportes analytics tiempo real',
+      '✓ Multiusuario y multi-sucursal',
+      '✓ Soporte y actualizaciones incluidas'
+    ],
+    pricing: {
+      basic: 'Desde $3.700.000 CLP',
+      note: 'Precio no incluye impuestos. Inversión única, sin mensualidades.'
     },
+    timeline: '8-12 semanas',
+    deliverables: [
+      'Sistema ERP 100% funcional',
+      'Capacitación todo el equipo',
+      'Documentación técnica completa',
+      'Soporte 3 meses post-implementación',
+      'Manual de usuario'
+    ],
+    image: '/erp.png',
+    cta: 'Ver más →'
   },
   {
     id: 'inversion',
     icon: TrendingUp,
     title: 'Consultoría 1:1 - Técnicas y Estrategias para Aprender a Invertir en Bolsa',
-    shortDescription: 'Aprende a invertir con criterio. Sesión personalizada de educación financiera y bursátil.',
-    price: '$37.000 CLP',
-    priceNote: '* Precios no incluyen IVA. Sesión de 1 hora online.',
-    cta: 'Ver más',
-    image: '/inversion.png',
-    fullDetails: {
-      description: 'Sesión en vivo de 1 hora donde te enseño a conocer tu capacidad de inversión, relación con el riesgo, y las opciones disponibles: plataformas, costos y comisiones. Educación financiera práctica para tomar decisiones informadas.',
-      features: [
-        '✓ Evaluación de perfil de inversor y riesgo',
-        '✓ Educación sobre fundamentos de bolsa',
-        '✓ Análisis de plataformas y brokers',
-        '✓ Costos, comisiones y aspectos prácticos',
-        '✓ Estrategias de diversificación',
-        '✓ Gestión emocional del riesgo',
-      ],
-      deliverables: [
-        'Sesión personalizada 1:1',
-        'Material de apoyo',
-        'Grabación de la sesión',
-        'Seguimiento por email',
-      ],
-      timeline: '1 hora (sesión online)',
-      ctaFinal: 'Quiero aprender a invertir',
+    problem: '¿Quieres invertir pero no sabes por dónde empezar?',
+    executiveSummary: 'Educación financiera práctica en sesión personalizada de 1 hora. Aprende a conocer tu perfil de inversor, entiende los mercados y toma decisiones informadas con criterio profesional.',
+    fullDescription: 'Sesión en vivo 1:1 donde evalúo tu capacidad de inversión, relación con el riesgo y te muestro las opciones disponibles: plataformas, brokers, costos y comisiones. Educación bursátil práctica sin promesas falsas de rentabilidad.',
+    features: [
+      '✓ Evaluación perfil inversor y riesgo',
+      '✓ Educación fundamentos bolsa',
+      '✓ Análisis plataformas y brokers',
+      '✓ Costos, comisiones, aspectos prácticos',
+      '✓ Estrategias de diversificación',
+      '✓ Gestión emocional del riesgo'
+    ],
+    pricing: {
+      session: '$37.000 CLP',
+      note: 'Precio no incluye impuestos. Sesión de 1 hora online.'
     },
+    timeline: '1 hora (sesión online)',
+    deliverables: [
+      'Sesión personalizada 1:1',
+      'Material de apoyo descargable',
+      'Grabación de la sesión',
+      'Seguimiento por email 7 días'
+    ],
     note: '* Servicio complementario - Requiere haber trabajado al menos 1 proyecto de transformación digital',
+    image: '/inversion.png',
+    cta: 'Ver más →'
   },
 ]

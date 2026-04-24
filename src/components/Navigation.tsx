@@ -93,7 +93,7 @@ export default function Navigation() {
 
             <img
 
-              src="/logo1.png"
+              src="/logo2.png"
 
               alt="Edilio Beas Logo"
 

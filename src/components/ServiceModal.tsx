@@ -63,15 +63,22 @@ export default function ServiceModal({ service, isOpen, onClose }: ServiceModalP
                   />
                 </div>
 
-                {/* Descripción completa */}
+                {/* Problem */}
+                <div className="bg-[#D4AF6A]/10 p-3 rounded-lg">
+                  <p className="text-sm font-semibold text-[#D4AF6A]">
+                    {service.problem}
+                  </p>
+                </div>
+
+                {/* Full Description */}
                 <p className="text-gray-600 leading-relaxed">
-                  {service.fullDetails.description}
+                  {service.fullDescription}
                 </p>
 
                 {/* Features con checkmarks */}
                 <div className="space-y-3">
                   <h4 className="font-semibold text-[#05121F]">Lo que incluye:</h4>
-                  {service.fullDetails.features.map((feature, idx) => (
+                  {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-[#C5A059] mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span className="text-gray-700">{feature}</span>
@@ -83,7 +90,7 @@ export default function ServiceModal({ service, isOpen, onClose }: ServiceModalP
                 <div className="bg-[#05121F]/5 p-4 rounded-lg">
                   <h4 className="font-semibold text-[#05121F] mb-3">Entregables:</h4>
                   <ul className="space-y-2">
-                    {service.fullDetails.deliverables.map((item, idx) => (
+                    {service.deliverables.map((item, idx) => (
                       <li key={idx} className="text-sm text-gray-700 flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-[#C5A059] rounded-full" aria-hidden="true" />
                         {item}
@@ -95,16 +102,23 @@ export default function ServiceModal({ service, isOpen, onClose }: ServiceModalP
                 {/* Timeline */}
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <Clock className="w-5 h-5 text-[#C5A059]" aria-hidden="true" />
-                  <span>Tiempo estimado: {service.fullDetails.timeline}</span>
+                  <span>Tiempo estimado: {service.timeline}</span>
                 </div>
 
-                {/* Precio destacado */}
-                <div className="text-center py-4 border-t border-gray-100">
-                  <span className="text-3xl font-bold text-[#C5A059]">{service.price}</span>
-                  {service.priceNote && (
-                    <p className="text-sm text-gray-500 mt-1">{service.priceNote}</p>
-                  )}
-                  <p className="text-sm text-gray-500 mt-2">Cotización personalizada según necesidades</p>
+                {/* All Pricing Tiers */}
+                <div className="py-4 border-t border-gray-100">
+                  <h4 className="font-semibold text-[#05121F] mb-3 text-center">Precios:</h4>
+                  <div className="space-y-2">
+                    {Object.entries(service.pricing)
+                      .filter(([key]) => key !== 'note')
+                      .map(([key, value]) => (
+                        <div key={key} className="flex justify-between items-center py-2 border-b border-gray-50 last:border-0">
+                          <span className="text-gray-600 capitalize">{key}</span>
+                          <span className="text-xl font-bold text-[#C5A059]">{value}</span>
+                        </div>
+                      ))}
+                  </div>
+                  <p className="text-sm text-gray-500 mt-3 text-center">{service.pricing.note}</p>
                 </div>
 
                 {/* Note if exists */}
@@ -121,7 +135,7 @@ export default function ServiceModal({ service, isOpen, onClose }: ServiceModalP
                   rel="noopener noreferrer"
                   className="block w-full bg-[#C5A059] text-white py-4 rounded-lg font-bold text-lg hover:bg-[#D4AF6A] transition-colors shadow-lg text-center"
                 >
-                  {service.fullDetails.ctaFinal}
+                  {service.cta}
                 </a>
               </div>
             </div>
