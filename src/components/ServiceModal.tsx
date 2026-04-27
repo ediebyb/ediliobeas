@@ -55,7 +55,7 @@ export default function ServiceModal({ service, isOpen, onClose }: ServiceModalP
               {/* Content */}
               <div className="p-6 space-y-6">
                 {/* Image */}
-                <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-50">
+                <div className="w-full h-48 rounded-xl overflow-hidden bg-gray-50">
                   <img
                     src={service.image}
                     alt={service.title}

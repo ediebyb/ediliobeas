@@ -15,6 +15,8 @@ export default function Navigation() {
 
   const [isScrolled, setIsScrolled] = useState(false)
 
+  const [activeSection, setActiveSection] = useState('inicio')
+
 
 
   useEffect(() => {
@@ -23,9 +25,27 @@ export default function Navigation() {
 
       setIsScrolled(window.scrollY > 20)
 
+      // Scroll spy - detectar seccion activa
+      const sections = NAV_LINKS.map(link => link.href.replace('#', ''))
+      let current = 'inicio'
+      
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          if (rect.top <= 100) {
+            current = section
+          }
+        }
+      }
+      
+      setActiveSection(current)
+
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
+
+    handleScroll() // Llamar una vez al inicio
 
     return () => window.removeEventListener('scroll', handleScroll)
 
@@ -109,29 +129,43 @@ export default function Navigation() {
 
           {/* Links desktop */}
 
-          <ul className="hidden md:flex items-center space-x-8" role="list">
+          <ul className="hidden md:flex items-center space-x-2" role="list">
 
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map((link) => {
 
-              <li key={link.href}>
+              const isActive = activeSection === link.href.replace('#', '')
 
-                <a
+              return (
 
-                  href={link.href}
+                <li key={link.href} className="relative">
 
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  <a
 
-                  className="text-white hover:text-[#C5A059] font-medium transition-colors duration-200 text-sm"
+                    href={link.href}
 
-                >
+                    onClick={(e) => handleNavClick(e, link.href)}
 
-                  {link.label}
+                    className={`relative px-4 py-2 font-medium transition-colors duration-200 text-sm rounded-lg ${
 
-                </a>
+                      isActive
 
-              </li>
+                        ? 'text-[#05121F] bg-[#C5A059]'
 
-            ))}
+                        : 'text-white hover:text-[#C5A059]'
+
+                    }`}
+
+                  >
+
+                    {link.label}
+
+                  </a>
+
+                </li>
+
+              )
+
+            })}
 
           </ul>
 

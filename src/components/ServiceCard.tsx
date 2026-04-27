@@ -27,7 +27,7 @@ export default function ServiceCard({ service, onOpenModal }: ServiceCardProps) 
       className="p-6 hover:shadow-xl transition-shadow duration-300 bg-white rounded-xl border border-gray-100 flex flex-col h-full"
     >
       {/* Image - medium size, centered */}
-      <div className="w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-50">
+      <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-gray-50">
         <img
           src={service.image}
           alt={service.title}

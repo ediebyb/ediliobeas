@@ -26,7 +26,7 @@ export default function Footer() {
             <img
               src="/logomini.png"
               alt="Edilio Beas Logo"
-              className="h-12 w-auto mb-4"
+              className="h-12 w-auto mb-4 rounded-lg"
             />
             <h3 className="text-white font-bold text-xl mb-4">
               ¿Listo para transformar tu PyME?
