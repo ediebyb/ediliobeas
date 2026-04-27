@@ -15,8 +15,8 @@ interface Slide {
 const slides: Slide[] = [
   {
     title: 'Transforma tu PyME con estrategias digitales probadas',
-    subtitle: 'Más ventas, menos estrés, operación automatizada',
-    cta: 'Comenzar diagnóstico gratis',
+    subtitle: 'Más ventas, mejor gestión, operación automatizada',
+    cta: 'Comenzar consultoría gratis',
     icon: TrendingUp,
   },
   {
