@@ -64,8 +64,8 @@ export default function ServiceModal({ service, isOpen, onClose }: ServiceModalP
                 </div>
 
                 {/* Problem */}
-                <div className="bg-[#D4AF6A]/10 p-3 rounded-lg">
-                  <p className="text-sm font-semibold text-[#D4AF6A]">
+                <div className="bg-[#C5A059]/15 p-3 rounded-lg border border-[#C5A059]/30">
+                  <p className="text-sm font-bold text-[#C5A059]">
                     {service.problem}
                   </p>
                 </div>

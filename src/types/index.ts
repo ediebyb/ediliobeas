@@ -16,6 +16,8 @@ export interface Service {
     basic?: string
     process?: string
     session?: string
+    unique?: string
+    monthly?: string
     note: string
   }
   timeline: string

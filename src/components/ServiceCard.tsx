@@ -41,7 +41,7 @@ export default function ServiceCard({ service, onOpenModal }: ServiceCardProps) 
       </h3>
 
       {/* Problem - short phrase in gold */}
-      <p className="text-sm font-semibold text-[#D4AF6A] mb-2">
+      <p className="text-sm font-bold text-[#C5A059] mb-2 drop-shadow-sm">
         {service.problem}
       </p>
 
@@ -52,7 +52,7 @@ export default function ServiceCard({ service, onOpenModal }: ServiceCardProps) 
 
       {/* Price - only lowest with "Desde" */}
       <div className="mb-4 mt-auto">
-        <p className="text-2xl font-bold text-[#D4AF6A]">
+        <p className="text-2xl font-bold text-[#C5A059] drop-shadow-sm">
           {getLowestPrice()}
         </p>
         <p className="text-xs text-gray-500 mt-1">

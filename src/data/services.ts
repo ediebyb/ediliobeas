@@ -1,4 +1,4 @@
-import { MapPin, Globe, Smartphone, FileSpreadsheet, Database, TrendingUp } from 'lucide-react'
+import { MapPin, Globe, Smartphone, FileSpreadsheet, Database, TrendingUp, Share2 } from 'lucide-react'
 import type { Service } from '@/types'
 
 export const SERVICES: Service[] = [
@@ -180,6 +180,38 @@ export const SERVICES: Service[] = [
     ],
     note: '* Servicio complementario - Requiere haber trabajado al menos 1 proyecto de transformación digital',
     image: '/inversion.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'redes-sociales',
+    icon: Share2,
+    title: 'Manejo de Redes Sociales',
+    problem: '¿Tus redes sociales no generan ventas ni engagement?',
+    executiveSummary: 'Transforma tus redes en una máquina de ventas. Estrategia de contenido que posiciona tu marca como autoridad, conecta con clientes calificados y convierte seguidores en compradores reales sin depender solo de la suerte.',
+    fullDescription: 'El 90% de las empresas en redes sociales publican sin estrategia y desperdician su tiempo. Yo creo sistemas de contenido enfocados en resultados: diagnóstico completo de tu presencia actual, optimización de biografías que venden, y planes de contenido mensuales diseñados para 3 objetivos específicos que tú eliges según tu prioridad de negocio.',
+    features: [
+      '✓ Diagnóstico completo presencia actual en redes',
+      '✓ Optimización de biografías que convierten visitantes en seguidores',
+      '✓ Plan de contenido mensual enfocado en resultados',
+      '✓ Creación de contenido profesional (diseño + copywriting)',
+      '✓ Administración de campañas publicitarias pagadas',
+      '✓ Métricas y reportes de crecimiento real'
+    ],
+    pricing: {
+      unique: 'Desde $370.000 CLP (pago único)',
+      monthly: 'Desde $127.000 CLP/mes (pago recurrente)',
+      note: 'Precio no incluye impuestos. Inversión en ads no incluida.'
+    },
+    timeline: '1 semana diagnóstico + implementación inmediata',
+    deliverables: [
+      'Auditoría completa de redes sociales',
+      'Bios optimizadas para conversión',
+      'Plan de contenido mensual estratégico',
+      '12-15 piezas de contenido profesional/mes',
+      'Reporte semanal de métricas y resultados',
+      'Soporte y ajustes de estrategia continuo'
+    ],
+    image: '/social.png',
     cta: 'Ver más →'
   },
 ]
