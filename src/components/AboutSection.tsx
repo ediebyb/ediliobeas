@@ -68,7 +68,7 @@ export default function AboutSection() {
 
             {/* Logo debajo de la foto - mismo tamaño */}
             <img
-              src="/logo1.png"
+              src="/logo 1.png"
               alt="Edilio Beas Logo"
               className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-contain shadow-2xl bg-[#05121F] p-4"
             />

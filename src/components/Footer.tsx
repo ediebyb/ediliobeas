@@ -24,7 +24,7 @@ export default function Footer() {
           {/* COLUMNA 1: Logo + Propuesta de Valor */}
           <div>
             <img
-              src="/logo1.png"
+              src="/logomini.png"
               alt="Edilio Beas Logo"
               className="h-12 w-auto mb-4"
             />
