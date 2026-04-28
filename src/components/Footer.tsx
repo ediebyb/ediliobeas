@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Shield, CreditCard, Bitcoin, Landmark } from 'lucide-react'
 import { fadeIn } from '@/utils/animations'
-import { SETMORE_LINK } from '@/data/setmore'
 
 const CURRENT_YEAR = new Date().getFullYear()
 
