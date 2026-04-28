@@ -14,31 +14,31 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    title: 'Transforma tu PyME con estrategias digitales probadas',
-    subtitle: 'Más ventas, mejor gestión, operación automatizada',
-    cta: 'Comenzar consultoría gratis',
+    title: 'Transforma tu operación en ventas predecibles',
+    subtitle: 'Optimizamos tu presencia digital y automatizamos procesos clave para escalar tu PyME sin sobrecargar tu tiempo',
+    cta: 'Solicita tu diagnóstico estratégico gratuito',
     icon: TrendingUp,
   },
   {
-    title: 'Más de 150 proyectos exitosos en LATAM',
-    subtitle: 'Empresas en Chile, México, Colombia y Argentina ya transformaron su operación',
+    title: 'Más de 150 proyectos con resultados medibles',
+    subtitle: 'PyMEs en Chile, México, Colombia y Argentina escalan sin aumentar personal',
     stats: [
-      { value: '+150%', label: 'aumento en ventas' },
-      { value: '70%', label: 'reducción de tareas' },
-      { value: '30+', label: 'PyMEs acompañadas' },
+      { value: '+150%', label: 'llamadas desde Google' },
+      { value: '15h+', label: 'horas recuperadas/semana' },
+      { value: '40%', label: 'más leads calificados' },
     ],
     cta: 'Ver casos de éxito',
     icon: Award,
   },
   {
-    title: 'Primera consultoría gratuita sin compromiso',
-    subtitle: '30 minutos para identificar oportunidades de crecimiento en tu negocio',
+    title: 'Diagnóstico estratégico gratuito',
+    subtitle: '30 minutos para identificar oportunidades de crecimiento y crear tu plan de acción personalizado',
     bullets: [
       'Auditoría digital completa',
-      'Plan de acción personalizado',
+      'Plan de crecimiento predecible',
       'Sin obligación de contratar',
     ],
-    cta: 'Agendar mi consultoría gratis',
+    cta: 'Agenda tu diagnóstico gratuito',
     icon: Calendar,
   },
 ]

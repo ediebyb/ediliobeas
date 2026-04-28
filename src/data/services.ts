@@ -5,17 +5,17 @@ export const SERVICES: Service[] = [
   {
     id: 'google-maps',
     icon: MapPin,
-    title: 'Optimización/Creación de Perfil Google Mi Negocio',
-    problem: '¿Tu negocio no aparece cuando te buscan en Google?',
-    executiveSummary: 'Posiciona tu negocio en los primeros resultados de Google Maps. Optimización SEO local avanzada que aumenta llamadas y visitas en 60 días. Ideal para negocios locales que quieren destacar frente a su competencia.',
-    fullDescription: 'Servicio completo de optimización y creación de perfiles Google Mi Negocio. Implementamos estrategias SEO locales avanzadas, gestión de reseñas y contenido visual profesional para maximizar tu visibilidad en búsquedas locales.',
+    title: 'Aparece primero en Google Maps y convierte búsquedas en llamadas',
+    problem: '¿Tus clientes te buscan en Google y no te encuentran?',
+    executiveSummary: 'Optimización SEO local avanzada que posiciona tu negocio en las 3 primeras posiciones de Google Maps. Aumenta llamadas y visitas en 60 días con métricas reportadas mensualmente.',
+    fullDescription: 'Servicio completo de optimización y creación de perfiles Google Mi Negocio enfocado en conversión. Implementamos estrategias SEO locales avanzadas, gestión de reseñas que generan confianza y contenido visual profesional para maximizar tu visibilidad en búsquedas locales. Todo medible y reportado.',
     features: [
-      '✓ Optimización SEO local con verificación completa',
-      '✓ Estrategia de reseñas que generan confianza',
-      '✓ Fotografías profesionales optimizadas',
-      '✓ Publicación semanal de contenido',
-      '✓ Reportes mensuales de rendimiento',
-      '✓ Soporte continuo y actualizaciones'
+      '✓ Optimización SEO local para top 3 en Google Maps',
+      '✓ Estrategia de reseñas que aumentan conversión',
+      '✓ Fotografías profesionales optimizadas para destacar',
+      '✓ Publicación semanal de contenido que atrae',
+      '✓ Reportes mensuales con métricas de llamadas y visitas',
+      '✓ Soporte continuo y ajustes según resultados'
     ],
     pricing: {
       optimization: '$270.000 CLP',
@@ -24,10 +24,10 @@ export const SERVICES: Service[] = [
     },
     timeline: '2-3 semanas',
     deliverables: [
-      'Perfil 100% optimizado y verificado',
-      'Estrategia de keywords locales',
-      'Galería de 10+ fotos profesionales',
-      'Plan de contenido mensual'
+      'Perfil 100% optimizado y verificado en top 3',
+      'Estrategia de keywords locales con alto volumen',
+      'Galería de 10+ fotos profesionales optimizadas',
+      'Plan de contenido mensual enfocado en conversiones'
     ],
     image: '/google maps.png',
     cta: 'Ver más →'
@@ -35,17 +35,17 @@ export const SERVICES: Service[] = [
   {
     id: 'paginas-web',
     icon: Globe,
-    title: 'Creación de Páginas Web con/sin carrito de compra',
-    problem: '¿Sin web profesional o tu web actual no vende?',
-    executiveSummary: 'Desarrollo de páginas web profesionales, rápidas y optimizadas para SEO. Desde landing pages hasta eCommerce completos. Tu negocio abierto 24/7 generando ventas automáticas mientras duermes.',
-    fullDescription: 'Diseño y desarrollo de sitios web profesionales con las últimas tecnologías. Incluimos optimización SEO, velocidad de carga optimizada, diseño responsive perfecto en móviles y integración con herramientas de marketing y ventas.',
+    title: 'Tu web como vendedor 24/7: convierte visitas en oportunidades',
+    problem: '¿Tu web actual no genera ventas, solo "se ve bonita"?',
+    executiveSummary: 'Diseño + SEO + velocidad = conversión medible. Desarrollamos landing pages y eCommerce que transforman visitantes en clientes. Aumento promedio de 40% en leads calificados en 90 días.',
+    fullDescription: 'Diseño y desarrollo de sitios web profesionales enfocados en resultados comerciales, no solo estética. Incluimos optimización SEO técnica completa, velocidad de carga optimizada (<3s), diseño responsive perfecto en móviles y integración con herramientas de marketing y ventas que miden y mejoran tus conversiones.',
     features: [
-      '✓ Diseño profesional 100% responsive',
-      '✓ Optimización SEO técnica completa',
-      '✓ Velocidad de carga optimizada (<3s)',
-      '✓ Integración WhatsApp y formularios',
-      '✓ eCommerce con pasarela de pagos',
-      '✓ Panel autoadministrable intuitivo'
+      '✓ Diseño profesional enfocado en conversión, no solo estética',
+      '✓ Optimización SEO técnica completa para más tráfico calificado',
+      '✓ Velocidad de carga optimizada (<3s) para retener visitantes',
+      '✓ Integración WhatsApp y formularios que capturan leads',
+      '✓ eCommerce con pasarela de pagos y flujo de checkout optimizado',
+      '✓ Panel autoadministrable + métricas de conversión en tiempo real'
     ],
     pricing: {
       landing: '$570.000 CLP',
@@ -54,11 +54,11 @@ export const SERVICES: Service[] = [
     },
     timeline: '2-4 semanas',
     deliverables: [
-      'Diseño personalizado único',
-      'Optimización SEO completa',
-      'Integración Google Analytics',
-      'Capacitación de uso incluida',
-      '30 días de soporte gratuito'
+      'Diseño personalizado único enfocado en conversiones',
+      'Optimización SEO completa con keywords de alta intención',
+      'Integración Google Analytics + configuración de goals',
+      'Capacitación de uso incluida + guía de mejora continua',
+      '30 días de soporte gratuito post-lanzamiento'
     ],
     image: '/pag web.png',
     cta: 'Ver más →'
@@ -96,17 +96,17 @@ export const SERVICES: Service[] = [
   {
     id: 'google-sheet',
     icon: FileSpreadsheet,
-    title: 'Desarrollo de Flujo de Trabajo Automatizado en Google Sheet',
-    problem: '¿Pierdes horas en tareas manuales repetitivas?',
-    executiveSummary: 'Automatiza procesos que quitan tiempo y generan errores. Workflows avanzados con Google Apps Script que recuperan 15+ horas semanales y eliminan errores humanos en tus datos.',
-    fullDescription: 'Digitalización y automatización de procesos repetitivos mediante Google Apps Script. Creamos sistemas inteligentes que generan reportes automáticos, integran herramientas y proporcionan dashboards en tiempo real para toma de decisiones.',
+    title: 'Elimina el trabajo manual repetitivo y recupera 15+ horas/semana',
+    problem: '¿Pierdes horas copiando-pegando y cometiendo errores manuales?',
+    executiveSummary: 'Workflows con Google Apps Script que automatizan reportes, emails y procesos. Cero errores humanos + dashboards en tiempo real para tomar decisiones con datos, no con intuición.',
+    fullDescription: 'Digitalización y automatización de procesos repetitivos mediante Google Apps Script enfocados en resultados medibles. Creamos sistemas inteligentes que generan reportes automáticos, integran herramientas y proporcionan dashboards en tiempo real para toma de decisiones basada en datos concretos.',
     features: [
-      '✓ Automatización reportes y emails',
-      '✓ Integración Forms, Sheets, Gmail',
-      '✓ Dashboards automáticos tiempo real',
-      '✓ Workflows avanzados Apps Script',
-      '✓ Cero errores manuales',
-      '✓ Informes ejecutivos automáticos'
+      '✓ Automatización de reportes y emails programados',
+      '✓ Integración Forms, Sheets, Gmail sin errores manuales',
+      '✓ Dashboards automáticos en tiempo real para decisiones ágiles',
+      '✓ Workflows avanzados Apps Script personalizados a tu operación',
+      '✓ Cero errores manuales + trazabilidad completa',
+      '✓ Informes ejecutivos automáticos con métricas clave'
     ],
     pricing: {
       process: '$270.000 CLP por proceso',
@@ -114,10 +114,10 @@ export const SERVICES: Service[] = [
     },
     timeline: '2-3 semanas por proceso',
     deliverables: [
-      'Proceso 100% automatizado',
-      'Documentación del sistema',
-      'Capacitación de uso',
-      'Soporte técnico 1 mes'
+      'Proceso 100% automatizado y documentado',
+      'Documentación técnica + manual de usuario',
+      'Capacitación del equipo incluida',
+      'Soporte técnico 1 mes post-implementación'
     ],
     image: '/sheet.png',
     cta: 'Ver más →'
@@ -125,29 +125,29 @@ export const SERVICES: Service[] = [
   {
     id: 'erp',
     icon: Database,
-    title: 'Desarrollo de Sistemas de Gestión Comercial ERP',
-    problem: '¿Caos operativo con Excel y sistemas separados?',
-    executiveSummary: 'Software ERP a medida que integra ventas, inventario y finanzas en una sola plataforma. Orden total en tu operación con inversión única, sin mensualidades eternas.',
-    fullDescription: 'Sistema de gestión comercial diseñado 100% a medida de tus necesidades. Integra todas las áreas de tu negocio: ventas, inventario, contabilidad y operaciones en una plataforma unificada con reportes en tiempo real.',
+    title: 'Orden total en tu operación: ventas, inventario y finanzas en una plataforma',
+    problem: '¿Caos operativo con Excel, WhatsApp y sistemas que no se hablan?',
+    executiveSummary: 'ERP a medida que integra todas las áreas de tu negocio en tiempo real. Inversión única, sin mensualidades eternas. Escalabilidad sin contratar más personal.',
+    fullDescription: 'Sistema de gestión comercial diseñado 100% a medida de tus procesos reales. Integra ventas, inventario, contabilidad y operaciones en una plataforma unificada con reportes en tiempo real que te dan el control total de tu negocio sin depender de múltiples herramientas separadas.',
     features: [
-      '✓ Módulos ventas, inventario, contabilidad',
-      '✓ Personalización total necesidades',
-      '✓ Migración datos sistemas actuales',
-      '✓ Reportes analytics tiempo real',
-      '✓ Multiusuario y multi-sucursal',
-      '✓ Soporte y actualizaciones incluidas'
+      '✓ Módulos de ventas, inventario y contabilidad integrados',
+      '✓ Personalización total según tus flujos de trabajo',
+      '✓ Migración de datos desde tus sistemas actuales',
+      '✓ Reportes analytics en tiempo real para decisiones informadas',
+      '✓ Multiusuario y multi-sucursal sin límites',
+      '✓ Soporte y actualizaciones incluidas por 1 año'
     ],
     pricing: {
       basic: 'Desde $3.700.000 CLP',
-      note: 'Precio no incluye impuestos. Inversión única, sin mensualidades.'
+      note: 'Precio no incluye impuestos. Inversión única, sin mensualidades eternas.'
     },
     timeline: '8-12 semanas',
     deliverables: [
-      'Sistema ERP 100% funcional',
-      'Capacitación todo el equipo',
-      'Documentación técnica completa',
-      'Soporte 3 meses post-implementación',
-      'Manual de usuario'
+      'Sistema ERP 100% funcional y testeado',
+      'Capacitación completa para todo el equipo',
+      'Documentación técnica completa + manual de usuario',
+      'Soporte 3 meses post-implementación incluido',
+      'Manual de usuario y video tutoriales'
     ],
     image: '/erp.png',
     cta: 'Ver más →'
