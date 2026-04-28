@@ -2,8 +2,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
-
-import { cloudflare } from "@cloudflare/vite-plugin";
+import { cloudflare } from '@cloudflare/vite-plugin'
 
 export default defineConfig({
   plugins: [react(), cloudflare()],
@@ -12,7 +11,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
+    minify: 'esbuild',
     cssMinify: true,
     rollupOptions: {
       output: {
@@ -21,12 +20,6 @@ export default defineConfig({
           motion: ['framer-motion'],
           icons: ['lucide-react'],
         },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
       },
     },
     reportCompressedSize: false,
