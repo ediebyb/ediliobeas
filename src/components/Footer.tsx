@@ -18,8 +18,8 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-        {/* GRID DE 3 COLUMNAS */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        {/* GRID DE 2 COLUMNAS */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
 
           {/* COLUMNA 1: Logo + Propuesta de Valor + CTA + Confidencialidad */}
           <div>
@@ -51,27 +51,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* COLUMNA 2: Stats de Autoridad */}
-          <div className="grid grid-cols-2 gap-4 content-start">
-            <div className="group cursor-default">
-              <div className="text-2xl font-bold text-[#C5A059] mb-1 group-hover:scale-110 transition-transform duration-300 inline-block">150+</div>
-              <div className="text-gray-400 text-xs">Proyectos Exitosos</div>
-            </div>
-            <div className="group cursor-default">
-              <div className="text-2xl font-bold text-[#C5A059] mb-1 group-hover:scale-110 transition-transform duration-300 inline-block">30+</div>
-              <div className="text-gray-400 text-xs">PyMEs Transformadas</div>
-            </div>
-            <div className="group cursor-default">
-              <div className="text-2xl font-bold text-[#C5A059] mb-1 group-hover:scale-110 transition-transform duration-300 inline-block">4</div>
-              <div className="text-gray-400 text-xs">Países en LATAM</div>
-            </div>
-            <div className="group cursor-default">
-              <div className="text-2xl font-bold text-[#C5A059] mb-1 group-hover:scale-110 transition-transform duration-300 inline-block">100%</div>
-              <div className="text-gray-400 text-xs">Clientes Satisfechos</div>
-            </div>
-          </div>
-
-          {/* COLUMNA 3: Métodos de Pago */}
+          {/* COLUMNA 2: Métodos de Pago */}
           <div className="flex flex-col">
             <h4 className="text-white font-semibold mb-4">Métodos de pago</h4>
             <div className="flex flex-col gap-3">

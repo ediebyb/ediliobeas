@@ -112,7 +112,7 @@ export default function Navigation() {
           >
 
             <img
-              src="/logo2.png"
+              src="/logomini.png"
               alt="Edilio Beas Logo"
               className="h-12 w-auto rounded-lg bg-[#05121F]"
             />
