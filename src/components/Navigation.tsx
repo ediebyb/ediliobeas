@@ -111,14 +111,14 @@ export default function Navigation() {
 
           >
 
-            <div className="bg-[#05121F]/80 backdrop-blur-md rounded-lg px-2 py-1 -ml-2">
+            <div className="rounded-lg">
               <img
 
                 src="/logomini.png"
 
                 alt="Edilio Beas Logo"
 
-                className="h-10 w-auto"
+                className="h-12 w-auto"
 
               />
             </div>
