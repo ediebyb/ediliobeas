@@ -33,7 +33,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           
-          {/* Columna izquierda: Métricas arriba + CTA al medio + Fotos abajo */}
+          {/* Columna izquierda: Fotos arriba + Métricas en medio + CTA al final */}
           <motion.div
             variants={slideInLeft}
             initial="hidden"
@@ -41,7 +41,43 @@ export default function AboutSection() {
             viewport={{ once: true, margin: '-100px' }}
             className="flex flex-col items-center gap-6 order-2 md:order-1"
           >
-            {/* Métricas arriba */}
+            {/* Fotos arriba - igual tamaño */}
+            <div className="flex flex-col items-center gap-4 w-full">
+              {/* Foto de perfil */}
+              <div className="relative">
+                <img
+                  src="/Perfil.jpg"
+                  alt="Foto de Edilio Beas"
+                  className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-cover shadow-2xl"
+                />
+
+                {/* Badge flotante 1 - Experiencia */}
+                <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 bg-[#C5A059] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
+                  <div className="text-xl md:text-2xl font-bold">10+</div>
+                  <div className="text-xs">Años de experiencia</div>
+                </div>
+
+                {/* Badge flotante 2 - Proyectos */}
+                <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 bg-[#05121F] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
+                  <div className="text-xl md:text-2xl font-bold">150+</div>
+                  <div className="text-xs">Proyectos exitosos</div>
+                </div>
+
+                {/* Elemento decorativo - Líneas doradas */}
+                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%]">
+                  <div className="w-full h-full border-2 border-[#C5A059]/20 rounded-3xl rotate-3" />
+                </div>
+              </div>
+
+              {/* Logo - mismo tamaño que foto, solo con fondo azul */}
+              <img
+                src="/logo 1.png"
+                alt="Edilio Beas Logo"
+                className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-contain shadow-2xl bg-[#05121F] p-4"
+              />
+            </div>
+
+            {/* Métricas en medio */}
             <div className="w-full">
               {/* Stats - Desktop carousel */}
               <motion.div variants={fadeInUp} className="hidden md:block">
@@ -105,7 +141,7 @@ export default function AboutSection() {
               </motion.div>
             </div>
 
-            {/* CTA al medio */}
+            {/* CTA al final */}
             <motion.div variants={fadeInUp} className="w-full flex justify-center">
               <a
                 href={SETMORE_LINK}
@@ -117,42 +153,6 @@ export default function AboutSection() {
                 Agenda tu 1ª Consultoría Gratuita
               </a>
             </motion.div>
-
-            {/* Fotos abajo - igual tamaño */}
-            <div className="flex flex-col items-center gap-4 w-full">
-              {/* Foto de perfil */}
-              <div className="relative">
-                <img
-                  src="/Perfil.jpg"
-                  alt="Foto de Edilio Beas"
-                  className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-cover shadow-2xl"
-                />
-
-                {/* Badge flotante 1 - Experiencia */}
-                <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 bg-[#C5A059] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold">10+</div>
-                  <div className="text-xs">Años de experiencia</div>
-                </div>
-
-                {/* Badge flotante 2 - Proyectos */}
-                <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 bg-[#05121F] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold">150+</div>
-                  <div className="text-xs">Proyectos exitosos</div>
-                </div>
-
-                {/* Elemento decorativo - Líneas doradas */}
-                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%]">
-                  <div className="w-full h-full border-2 border-[#C5A059]/20 rounded-3xl rotate-3" />
-                </div>
-              </div>
-
-              {/* Logo - mismo tamaño que foto */}
-              <img
-                src="/logo 1.png"
-                alt="Edilio Beas Logo"
-                className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-contain shadow-2xl bg-[#05121F] p-4"
-              />
-            </div>
           </motion.div>
 
           {/* Contenido - orden 1 en movil, 2 en desktop */}

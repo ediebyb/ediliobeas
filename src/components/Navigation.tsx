@@ -105,23 +105,17 @@ export default function Navigation() {
 
             onClick={(e) => handleNavClick(e, '#inicio')}
 
-            className="flex items-center space-x-4"
+            className="flex items-center"
 
             aria-label="Edilio Beas - Ir al inicio"
 
           >
 
-            <div className="rounded-lg">
-              <img
-
-                src="/logomini.png"
-
-                alt="Edilio Beas Logo"
-
-                className="h-12 w-auto"
-
-              />
-            </div>
+            <img
+              src="/logo2.png"
+              alt="Edilio Beas Logo"
+              className="h-12 w-auto rounded-lg bg-[#05121F]"
+            />
 
           </a>
 
