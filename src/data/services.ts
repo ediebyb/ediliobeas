@@ -202,7 +202,7 @@ export const SERVICES: Service[] = [
       monthly: 'Desde $127.000 CLP/mes (pago recurrente)',
       note: 'Precio no incluye impuestos. Inversión en publicidad pagada no incluida.'
     },
-    timeline: '1 semana diagnóstico + implementación inmediata',
+    timeline: '1 semana de consultoría inicial + implementación inmediata',
     deliverables: [
       'Auditoría completa de redes sociales con informe detallado',
       'Biografías optimizadas para conversión en todas tus plataformas',

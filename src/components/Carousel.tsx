@@ -16,7 +16,7 @@ const slides: Slide[] = [
   {
     title: 'Transforma tu operación en ventas predecibles',
     subtitle: 'Optimizamos tu presencia digital y automatizamos procesos clave para escalar tu PyME sin sobrecargar tu tiempo',
-    cta: 'Solicita tu diagnóstico estratégico gratuito',
+    cta: 'Solicita tu consultoría estratégica gratuita',
     icon: TrendingUp,
   },
   {
@@ -31,14 +31,14 @@ const slides: Slide[] = [
     icon: Award,
   },
   {
-    title: 'Diagnóstico estratégico gratuito',
+    title: 'Consultoría estratégica gratuita',
     subtitle: '30 minutos para identificar oportunidades de crecimiento y crear tu plan de acción personalizado',
     bullets: [
       'Auditoría digital completa',
       'Plan de crecimiento predecible',
       'Sin obligación de contratar',
     ],
-    cta: 'Agenda tu diagnóstico gratuito',
+    cta: 'Agenda tu consultoría gratuita',
     icon: Calendar,
   },
 ]

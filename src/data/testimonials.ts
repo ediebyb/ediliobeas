@@ -20,7 +20,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Ana Rodríguez',
     role: 'Fundadora, Consultora HR Solutions',
     quote:
-      'La consultoría de liderazgo cambió mi forma de gestionar el equipo. Ahora trabajo con menos estrés y mejores resultados. Edilio entiende los desafíos reales de las PyMEs.',
+      'La consultoría de liderazgo cambió mi forma de gestionar el equipo. Ahora trabajo con mayor eficiencia y mejores resultados. Edilio entiende los desafíos reales de las PyMEs.',
   },
   {
     id: 'testimonial-4',
