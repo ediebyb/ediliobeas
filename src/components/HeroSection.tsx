@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0F2436] via-[#05121F] to-[#05121F] overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-tech-blue overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Fondo decorativo con gradiente radial */}

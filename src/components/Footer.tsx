@@ -13,7 +13,7 @@ export default function Footer() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="bg-[#05121F] border-t border-white/10"
+      className="bg-tech-blue border-t border-white/10"
       aria-label="Pie de página"
     >
       <div className="max-w-7xl mx-auto px-6 py-12">

@@ -14,7 +14,7 @@ export default function ServiceDetailPage() {
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-[#05121F]">
+      <div className="min-h-screen bg-tech-blue">
         <Navigation />
         <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
           <h1 className="text-4xl font-bold text-white mb-4">Servicio no encontrado</h1>
@@ -103,7 +103,7 @@ export default function ServiceDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#05121F]">
+    <div className="min-h-screen bg-tech-blue">
       <Navigation />
 
       {/* Hero del servicio */}
