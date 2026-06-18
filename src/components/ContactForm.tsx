@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import type { FormData, FormErrors, FormStatus } from '@/types'
-import { SERVICES } from '@/data/services'
 import { validateForm } from '@/utils/formUtils'
 import { fadeInUp } from '@/utils/animations'
 
@@ -220,9 +219,24 @@ export default function ContactForm() {
           className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30 transition-colors duration-200 text-gray-700"
         >
           <option value="">¿Sobre qué servicio me contactas?</option>
-          {SERVICES.map((s) => (
-            <option key={s.id} value={s.title}>{s.title}</option>
-          ))}
+          <optgroup label="Servicios a la carta">
+            <option value="Google Perfil Empresa">🗺️ Google Perfil Empresa — $130.000</option>
+            <option value="WhatsApp Business Pro">💬 WhatsApp Business Pro — $100.000</option>
+            <option value="Optimización 2 RRSS + IA">📱 Optimización 2 RRSS + IA — $100.000</option>
+            <option value="Página Web Básica">🎯 Página Web Básica — $160.000</option>
+          </optgroup>
+          <optgroup label="Pack">
+            <option value="Pack Posicionamiento">📦 Pack Posicionamiento — $255.000 (44% Off)</option>
+          </optgroup>
+          <optgroup label="Servicios Estratégicos">
+            <option value="Web Corporativa">🌐 Web Corporativa — Desde $550.000</option>
+            <option value="E-commerce Full">🛒 E-commerce Full — Desde $750.000</option>
+            <option value="Fábrica Contenido RRSS + IA">🎬 Fábrica Contenido RRSS + IA — Desde $200.000/mes</option>
+            <option value="Gestión Campañas Ads">📊 Gestión Campañas Ads — Desde $250.000/mes</option>
+            <option value="App Android">📱 App Android — Cotización</option>
+            <option value="ERP/CRM PyMEs">⚙️ ERP/CRM PyMEs — Cotización</option>
+          </optgroup>
+          <option value="Consultoría gratuita 30 min">🎁 Solo quiero la consultoría gratuita</option>
           <option value="Otro / No lo sé aún">Otro / No lo sé aún</option>
         </select>
       </div>
