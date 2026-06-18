@@ -13,7 +13,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   const getLowestPrice = () => {
     const prices = Object.entries(service.pricing)
       .filter(([key]) => key !== 'note')
-      .map(([_, value]) => value)
+      .map(([_, value]) => value as string | undefined)
+      .filter((v): v is string => typeof v === 'string')
     if (prices.length === 0) return ''
     const lowest = prices[0]
     return lowest.startsWith('Desde') ? lowest : `Desde ${lowest}`

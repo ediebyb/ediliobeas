@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { Shield, CreditCard, Bitcoin, Landmark, ArrowRight } from 'lucide-react'
 import { fadeIn } from '@/utils/animations'
 import { SETMORE_LINK } from '@/data/setmore'
@@ -32,7 +33,7 @@ export default function Footer() {
               ¿Listo para transformar tu PyME?
             </h3>
             <p className="text-gray-400 mb-6 text-sm">
-              Únete a las 30+ empresas en LATAM que ya aumentaron sus ventas y recuperaron su tiempo.
+              Únete a las 150+ PyMEs en LATAM que ya venden más y trabajan menos horas en tareas repetitivas.
             </p>
             <a
               href={SETMORE_LINK}
@@ -51,10 +52,22 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* COLUMNA 2: Métodos de Pago */}
-          <div className="flex flex-col">
-            <h4 className="text-white font-semibold mb-4">Métodos de pago</h4>
-            <div className="flex flex-col gap-3">
+          {/* COLUMNA 2: Links + Métodos de Pago */}
+          <div className="flex flex-col gap-8">
+            {/* Nav links */}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Navegación</h4>
+              <nav className="flex flex-col gap-2">
+                <Link to="/servicios" className="text-gray-400 hover:text-[#C5A059] text-sm transition-colors">Servicios</Link>
+                <Link to="/blog" className="text-gray-400 hover:text-[#C5A059] text-sm transition-colors">Blog</Link>
+                <a href="/#sobre-mi" className="text-gray-400 hover:text-[#C5A059] text-sm transition-colors">Sobre mí</a>
+                <a href="/#contacto" className="text-gray-400 hover:text-[#C5A059] text-sm transition-colors">Contacto</a>
+              </nav>
+            </div>
+            {/* Métodos de Pago */}
+            <div>
+              <h4 className="text-white font-semibold mb-4">Métodos de pago</h4>
+              <div className="flex flex-col gap-3">
               <div className="group flex items-center gap-3 text-gray-300 hover:text-[#C5A059] transition-all duration-300 cursor-pointer">
                 <div className="p-2 rounded-lg bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors duration-300">
                   <CreditCard className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
@@ -73,6 +86,7 @@ export default function Footer() {
                 </div>
                 <span className="text-sm">Transferencia Bancaria</span>
               </div>
+            </div>
             </div>
           </div>
         </div>

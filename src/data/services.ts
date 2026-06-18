@@ -1,224 +1,322 @@
-import { MapPin, Globe, Smartphone, FileSpreadsheet, Database, TrendingUp, Share2 } from 'lucide-react'
+import { CalendarCheck, MapPin, MessageCircle, Share2, LayoutTemplate, Rocket, Database, Megaphone, Sparkles, ShoppingCart, Building, Smartphone } from 'lucide-react'
 import type { Service } from '@/types'
 
 export const SERVICES: Service[] = [
   {
-    id: 'google-maps',
+    id: 'consultoria-gratis',
+    icon: CalendarCheck,
+    title: '1° Consultoría Gratuita',
+    problem: '¿No sabes por dónde empezar a profesionalizar tu marca?',
+    executiveSummary: 'Diagnóstico de visibilidad digital actual y propuesta ejecutiva personalizada en menos de 4 horas.',
+    fullDescription: 'Llamada de 30 minutos (WhatsApp o Google Meet) donde evaluaremos la salud de tu imagen de marca digital y te entregaré una guía sobre cómo empezar a trabajar en ella para profesionalizarla y vender más.',
+    features: [
+      '✓ Diagnóstico de visibilidad digital actual',
+      '✓ Identificación de 3 oportunidades de mejora',
+      '✓ Recomendaciones concretas y accionables',
+      '✓ Propuesta ejecutiva personalizada en <4h',
+      '✓ Checklist de acciones inmediatas'
+    ],
+    pricing: {
+      precio: '$0',
+      note: 'Sin costo, sin compromiso de compra'
+    },
+    timeline: '30 minutos',
+    deliverables: [
+      'Claridad sobre la salud de tu marca',
+      'Guía paso a paso',
+      'Propuesta ejecutiva'
+    ],
+    image: '/placeholder.png', // Update with actual image later
+    cta: 'Agendar Gratis →'
+  },
+  {
+    id: 'google-perfil',
     icon: MapPin,
-    title: 'Aparece primero en Google Maps y convierte búsquedas en llamadas',
-    problem: '¿Tus clientes te buscan en Google y no te encuentran?',
-    executiveSummary: 'Optimización SEO local avanzada que posiciona tu negocio en las 3 primeras posiciones de Google Maps. Aumenta llamadas y visitas en 60 días con métricas reportadas mensualmente.',
-    fullDescription: 'Servicio completo de optimización y creación de perfiles Google Mi Negocio enfocado en conversión. Implementamos estrategias SEO locales avanzadas, gestión de reseñas que generan confianza y contenido visual profesional para maximizar tu visibilidad en búsquedas locales. Todo medible y reportado.',
+    title: 'Google Perfil Empresa',
+    problem: '¿Tu negocio no aparece cuando te buscan en Google?',
+    executiveSummary: 'Optimización completa de Google Mi Negocio. Aumenta tu visibilidad un 30-50% en 15-30 días.',
+    fullDescription: 'Servicio de optimización de perfil de empresa para búsquedas "cerca de mí" y motores de Inteligencia Artificial. Aparecerás en Google Maps y estarás listo para ser recomendado por IAs.',
     features: [
-      '✓ Optimización SEO local para top 3 en Google Maps',
-      '✓ Estrategia de reseñas que aumentan conversión',
-      '✓ Fotografías profesionales optimizadas para destacar',
-      '✓ Publicación semanal de contenido que atrae',
-      '✓ Reportes mensuales con métricas de llamadas y visitas',
-      '✓ Soporte continuo y ajustes según resultados'
+      '✓ Keywords locales para búsquedas "cerca de mí"',
+      '✓ Fotos estratégicas que generan confianza',
+      '✓ Enlace directo a WhatsApp para consultas',
+      '✓ Descripción estructurada para respuestas de IA'
     ],
     pricing: {
-      optimization: '$270.000 CLP',
-      creation: '$300.000 CLP',
-      note: 'Precio no incluye impuestos'
+      unico: '$130.000 CLP',
+      note: 'Pago único'
     },
-    timeline: '2-3 semanas',
+    timeline: '15-30 días',
     deliverables: [
-      'Perfil 100% optimizado y verificado en top 3',
-      'Estrategia de keywords locales con alto volumen',
-      'Galería de 10+ fotos profesionales optimizadas',
-      'Plan de contenido mensual enfocado en conversiones'
+      'Perfil 100% optimizado',
+      'Guía rápida "5 Pasos para Mantener Perfil Google"'
     ],
-    image: '/icono-google-maps.png',
-    detailImage: '/ss-google-maps.png',
+    image: '/google maps.png',
     cta: 'Ver más →'
   },
   {
-    id: 'paginas-web',
-    icon: Globe,
-    title: 'Tu web como vendedor 24/7: convierte visitas en oportunidades',
-    problem: '¿Tu web actual no genera ventas, solo "se ve bonita"?',
-    executiveSummary: 'Diseño + SEO + velocidad = conversión medible. Desarrollamos landing pages y eCommerce que transforman visitantes en clientes. Aumento promedio de 40% en leads calificados en 90 días.',
-    fullDescription: 'Diseño y desarrollo de sitios web profesionales enfocados en resultados comerciales, no solo estética. Incluimos optimización SEO técnica completa, velocidad de carga optimizada (<3s), diseño responsive perfecto en móviles y integración con herramientas de marketing y ventas que miden y mejoran tus conversiones.',
+    id: 'whatsapp-pro',
+    icon: MessageCircle,
+    title: 'Whatsapp Business Pro',
+    problem: '¿Pierdes ventas por respuestas lentas o catálogo desordenado?',
+    executiveSummary: 'Configuración profesional para cerrar ventas 24/7 sin estar conectado.',
+    fullDescription: 'Organización integral de tu WhatsApp Business. Crearemos un catálogo visual, mensajes automáticos y etiquetas para cualificar leads desde el primer contacto.',
     features: [
-      '✓ Diseño profesional enfocado en conversión, no solo estética',
-      '✓ Optimización SEO técnica completa para más tráfico calificado',
-      '✓ Velocidad de carga optimizada (<3s) para retener visitantes',
-      '✓ Integración WhatsApp y formularios que capturan leads',
-      '✓ eCommerce con pasarela de pagos y flujo de checkout optimizado',
-      '✓ Panel autoadministrable + métricas de conversión en tiempo real'
+      '✓ Catálogo visual con hasta 15 productos',
+      '✓ Respuestas automáticas para dudas predefinidas',
+      '✓ Mensaje de bienvenida que cualifica leads',
+      '✓ Etiquetas para organizar y hacer seguimiento'
     ],
     pricing: {
-      landing: '$570.000 CLP',
-      ecommerce: 'Desde $970.000 CLP',
-      note: 'Precio no incluye impuestos. Dominio y hosting no incluidos.'
+      unico: '$100.000 CLP',
+      note: 'Pago único'
     },
-    timeline: '2-4 semanas',
+    timeline: '1-2 semanas',
     deliverables: [
-      'Diseño personalizado único enfocado en conversiones',
-      'Optimización SEO completa con keywords de alta intención',
-      'Integración Google Analytics + configuración de goals',
-      'Capacitación de uso incluida + guía de mejora continua',
-      '30 días de soporte gratuito post-lanzamiento'
+      'Configuración de WhatsApp Business lista',
+      'Plantilla de respuestas rápidas + guía de uso'
     ],
-    image: '/icono-pagweb.png',
-    detailImage: '/ss-pagweb.png',
+    image: '/placeholder.png',
     cta: 'Ver más →'
   },
   {
-    id: 'app-movil',
+    id: 'optimizacion-rrss',
+    icon: Share2,
+    title: 'Optimización 2 RRSS + Contenido IA',
+    problem: '¿Tus redes sociales no generan clientes reales?',
+    executiveSummary: 'Redes que generan consultas calificadas, no solo likes. Contenido que las IA pueden recomendar.',
+    fullDescription: 'Optimización estratégica de perfiles con enfoque en conversión e IA. Incluye la integración de CTAs claros y palabras clave que te posicionan ante preguntas en buscadores y ChatGPT.',
+    features: [
+      '✓ Bio con CTA claro y keywords conversacionales',
+      '✓ Descripción optimizada para IA y buscadores',
+      '✓ 2 publicaciones estáticas con IA (educa y convierte)',
+      '✓ Integración con Linktree para tráfico medible'
+    ],
+    pricing: {
+      unico: '$100.000 CLP',
+      note: 'Pago único'
+    },
+    timeline: '1 semana',
+    deliverables: [
+      '2 perfiles de RRSS optimizados',
+      'Calendario editorial básico',
+      'Guía de hashtags conversacionales'
+    ],
+    image: '/rrss.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'landing-page',
+    icon: LayoutTemplate,
+    title: 'Pág. Web Básica (1 sección)',
+    problem: '¿Tu web no convierte visitantes en consultas?',
+    executiveSummary: 'Landing page diseñada para convertir tráfico en leads sin inversión compleja.',
+    fullDescription: 'Página de alta conversión donde mostramos de manera clara quién eres, qué ofreces y un fuerte CTA hacia tu WhatsApp. No requiere mantenimiento técnico por tu parte.',
+    features: [
+      '✓ 1 sección clara (quién eres + qué ofreces + CTA)',
+      '✓ SEO básico para búsquedas locales',
+      '✓ Dominio incluido (ej: tupyme.page.dev)',
+      '✓ Contenido optimizado para respuestas de IA'
+    ],
+    pricing: {
+      unico: '$160.000 CLP',
+      note: 'Pago único'
+    },
+    timeline: 'Máx. 30 días hábiles',
+    deliverables: [
+      'Sitio web 100% funcional y publicado',
+      'Guía "CTA que convierten desconocidos en clientes"'
+    ],
+    image: '/pag web.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'pack-posicionamiento',
+    icon: Rocket,
+    title: 'Pack Posicionamiento',
+    problem: '¿No te encuentran en Google, pierdes ventas por WhatsApp y no apareces en IA?',
+    executiveSummary: 'Google Perfil Empresa + WhatsApp Pro + Landing Page + 2 RRSS. Todo optimizado para IA.',
+    fullDescription: 'El paquete definitivo para dueños de PyMEs que quieren tomar control de su presencia digital. Ahorras $235.000 CLP comparado con comprar cada servicio por separado.',
+    features: [
+      '✓ Google Perfil Empresa optimizado',
+      '✓ WhatsApp Business Pro con catálogo',
+      '✓ Landing Page básica (1 sección)',
+      '✓ Optimización de 2 RRSS con IA'
+    ],
+    pricing: {
+      descuento: '44% Descuento',
+      note: 'Promoción válida para los primeros 3 clientes del mes.'
+    },
+    timeline: '30-45 días hábiles',
+    deliverables: [
+      'Ecosistema digital completo funcionando',
+      'Guía "Mantén tu negocio en las primeras posiciones de Google"',
+      '1° Consultoría 30" Gratis: Diagnóstico+Propuesta<4h'
+    ],
+    image: '/placeholder.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'erp-crm',
+    icon: Database,
+    title: 'ERP/CRM Adaptado a PyMEs',
+    problem: '¿Desorden operativo, falta de control de inventario o clientes perdidos?',
+    executiveSummary: 'Sistema de gestión empresarial personalizado para ordenar operaciones administrativas.',
+    fullDescription: 'Mapeamos los procesos actuales de tu negocio y diseñamos un sistema a medida sin complejidad empresarial innecesaria. Tomarás decisiones basadas en datos reales, no en estimaciones.',
+    features: [
+      '✓ Gestión de clientes (historial, etiquetas)',
+      '✓ Inventario (stock, alertas, movimientos)',
+      '✓ Facturación (emisión, envío, registro)',
+      '✓ Reportes (ventas por período, clientes frecuentes)',
+      '✓ Agenda de citas/reservas'
+    ],
+    pricing: {
+      cotizacion: 'Cotización personalizada',
+      note: 'Precio varía según módulos y complejidad'
+    },
+    timeline: '45-60 días hábiles',
+    deliverables: [
+      'Software ERP/CRM funcionando',
+      'Capacitación para tu equipo (2 sesiones de 1h)',
+      'Soporte técnico 30 días post-implementación',
+      'Manual de usuario en PDF'
+    ],
+    image: '/erp.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'ads-campaigns',
+    icon: Megaphone,
+    title: 'Gestión de Campañas Ads (Meta/Google)',
+    problem: '¿Tus anuncios no generan clientes o estás gastando sin ver retorno?',
+    executiveSummary: 'Escalas consultas calificadas sin desperdiciar presupuesto. Pauta que se paga sola con clientes nuevos.',
+    fullDescription: 'Gestión profesional de campañas publicitarias en Meta (Facebook/Instagram) y/o Google Ads. Creamos copies optimizados, configuramos landing pages AEO-ready y optimizamos tu inversión semanalmente.',
+    features: [
+      '✓ Estrategia de audiencia y retargeting',
+      '✓ Creación de 3-5 anuncios por campaña',
+      '✓ Copies y creatividades optimizados con IA',
+      '✓ Implementación de píxel de seguimiento',
+      '✓ Reporte mensual (CPL, CPA, ROI)'
+    ],
+    pricing: {
+      mensual: 'Desde $250.000 CLP/mes',
+      note: 'Presupuesto de pauta publicitaria no incluido, lo define el cliente.'
+    },
+    timeline: 'Resultados en 15-30 días',
+    deliverables: [
+      'Campañas activas y en constante optimización',
+      'Reunión mensual de 30 min para revisar resultados'
+    ],
+    image: '/placeholder.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'fabrica-contenido',
+    icon: Sparkles,
+    title: 'Fábrica de Contenido RRSS con IA',
+    problem: '¿Te quedas sin ideas o no tienes tiempo para publicar en redes de forma constante?',
+    executiveSummary: 'Servicio mensual de creación de contenido. Mantén presencia constante sin invertir horas.',
+    fullDescription: 'Estrategia Digital que muestra Presencia constante. No más bloqueos creativos. Nosotros creamos el contenido base usando IA, lo repurponemos para múltiples formatos y medimos los resultados.',
+    features: [
+      '✓ 8-12 publicaciones estáticas con IA mensuales',
+      '✓ Calendario editorial mensual con fechas',
+      '✓ Repurposing (1 pieza base = múltiples formatos)',
+      '✓ Análisis mensual de alcance y conversiones'
+    ],
+    pricing: {
+      mensual: 'Desde $200.000 CLP/mes',
+      note: 'Servicio recurrente mensual.'
+    },
+    timeline: 'Continuo (primer contenido en 7 días)',
+    deliverables: [
+      'Contenido mensual listo para publicar',
+      'Reunión mensual de 30 min',
+      'Soporte por WhatsApp para dudas'
+    ],
+    image: '/placeholder.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'ecommerce',
+    icon: ShoppingCart,
+    title: 'Pág. Web E-commerce Básico',
+    problem: '¿Quieres vender 24/7 de manera automática y aceptar pagos con tarjeta?',
+    executiveSummary: 'Tienda online funcional para vender sin depender solo de WhatsApp. Catálogo y pagos integrados.',
+    fullDescription: 'Vendes mientras duermes, sin responder cada consulta manualmente. Los clientes compran con confianza gracias a un sitio profesional y métodos de pago locales.',
+    features: [
+      '✓ Diseño de tienda online con hasta 20 productos',
+      '✓ Carrito con cálculo automático de envío',
+      '✓ Integración Webpay, Mercado Pago o Transbank',
+      '✓ Sistema de cupones de descuento',
+      '✓ Panel de administración para gestionar pedidos'
+    ],
+    pricing: {
+      unico: 'Desde $750.000 CLP',
+      note: 'Varía según la cantidad de productos'
+    },
+    timeline: '45-60 días hábiles',
+    deliverables: [
+      'Tienda E-commerce funcional',
+      'Capacitación para gestionar la tienda',
+      'Dominio y hosting por 1 año',
+      '1 ronda de ajustes'
+    ],
+    image: '/placeholder.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'web-corporativa',
+    icon: Building,
+    title: 'Pág. Web Corporativa (6 Secciones)',
+    problem: '¿Necesitas mostrar toda tu autoridad, servicios y equipo para generar confianza B2B?',
+    executiveSummary: 'Sitio web profesional de 6 secciones diseñado para posicionar tu marca y capturar leads.',
+    fullDescription: 'Sitio completo para negocios que necesitan detallar servicios, historia y testimonios. Tu negocio aparece en Google y en respuestas de IA. Conviertes visitantes en consultas con una plataforma que transmite autoridad.',
+    features: [
+      '✓ Diseño de 6 secciones (Inicio, Servicios, Blog, etc.)',
+      '✓ SEO on-page completo y velocidad optimizada',
+      '✓ Integración con Google Analytics 4',
+      '✓ Botón flotante de WhatsApp y formulario a email'
+    ],
+    pricing: {
+      unico: 'Desde $550.000 CLP',
+      note: 'Varía según la complejidad del proyecto'
+    },
+    timeline: '45-60 días hábiles',
+    deliverables: [
+      'Sitio Web Corporativo',
+      'Dominio y hosting por 1 año',
+      'Capacitación básica',
+      '1 ronda de ajustes por sección'
+    ],
+    image: '/placeholder.png',
+    cta: 'Ver más →'
+  },
+  {
+    id: 'app-android',
     icon: Smartphone,
-    title: 'Desarrollo de Aplicación Móvil',
-    problem: '¿Tus clientes necesitan una app para comprarte?',
-    executiveSummary: 'Apps Android nativas que venden y fidelizan. Lleva tu negocio al bolsillo de tus clientes con una aplicación profesional, rápida y fácil de usar que aumenta la retención y ventas recurrentes.',
-    fullDescription: 'Desarrollo de aplicaciones móviles nativas Android para funciones específicas: vitrina de productos, pagos, CRM o gestión de clientes. Incluye notificaciones push, integración con backend y publicación en Play Store.',
+    title: 'App Android de Ventas y Fidelización',
+    problem: '¿Quieres aumentar la retención y frecuencia de compra de tus clientes actuales?',
+    executiveSummary: 'Aplicación nativa Android con catálogo, notificaciones push y programa de puntos.',
+    fullDescription: 'Clientes que vuelven porque tu app les da valor real. Desarrollamos una app que vive en los teléfonos de tus clientes para facilitar pedidos, darles beneficios por fidelidad y avisarles de promociones directamente.',
     features: [
-      '✓ App nativa Android alto rendimiento',
-      '✓ Vitrina de productos interactiva',
-      '✓ Pasarela de pagos móvil integrada',
-      '✓ CRM móvil para gestión clientes',
-      '✓ Notificaciones push engagement',
+      '✓ App Android nativa con catálogo interactivo',
+      '✓ Notificaciones push para promociones',
+      '✓ Programa de puntos (compras = descuentos)',
+      '✓ Perfil de usuario con historial de compras',
       '✓ Publicación en Google Play Store'
     ],
     pricing: {
-      basic: 'Desde $1.700.000 CLP',
-      note: 'Precio no incluye impuestos. Costo final según funcionalidades.'
+      cotizacion: 'Cotización personalizada',
+      note: 'Varía según las funcionalidades requeridas'
     },
-    timeline: '6-10 semanas',
+    timeline: '45-60 días hábiles',
     deliverables: [
-      'App funcional y testeada',
-      'Diseño UX/UI profesional',
-      'Integración backend completa',
-      'Soporte 3 meses post-lanzamiento',
-      'Manual de usuario'
+      'App nativa publicada en la tienda',
+      'Panel de administración',
+      'Capacitación para gestionar',
+      'Soporte técnico 30 días post-lanzamiento'
     ],
-    image: '/icono-app.png',
-    detailImage: '/ss-app.png',
+    image: '/app.png',
     cta: 'Ver más →'
-  },
-  {
-    id: 'google-sheet',
-    icon: FileSpreadsheet,
-    title: 'Elimina el trabajo manual repetitivo y recupera 15+ horas/semana',
-    problem: '¿Pierdes horas copiando-pegando y cometiendo errores manuales?',
-    executiveSummary: 'Workflows con Google Apps Script que automatizan reportes, emails y procesos. Cero errores humanos + dashboards en tiempo real para tomar decisiones con datos, no con intuición.',
-    fullDescription: 'Digitalización y automatización de procesos repetitivos mediante Google Apps Script enfocados en resultados medibles. Creamos sistemas inteligentes que generan reportes automáticos, integran herramientas y proporcionan dashboards en tiempo real para toma de decisiones basada en datos concretos.',
-    features: [
-      '✓ Automatización de reportes y emails programados',
-      '✓ Integración Forms, Sheets, Gmail sin errores manuales',
-      '✓ Dashboards automáticos en tiempo real para decisiones ágiles',
-      '✓ Workflows avanzados Apps Script personalizados a tu operación',
-      '✓ Cero errores manuales + trazabilidad completa',
-      '✓ Informes ejecutivos automáticos con métricas clave'
-    ],
-    pricing: {
-      process: '$270.000 CLP por proceso',
-      note: 'Precio no incluye impuestos'
-    },
-    timeline: '2-3 semanas por proceso',
-    deliverables: [
-      'Proceso 100% automatizado y documentado',
-      'Documentación técnica + manual de usuario',
-      'Capacitación del equipo incluida',
-      'Soporte técnico 1 mes post-implementación'
-    ],
-    image: '/icono-sheets.png',
-    detailImage: '/ss-sheets.png',
-    cta: 'Ver más →'
-  },
-  {
-    id: 'erp',
-    icon: Database,
-    title: 'Orden total en tu operación: ventas, inventario y finanzas en una plataforma',
-    problem: '¿Caos operativo con Excel, WhatsApp y sistemas que no se hablan?',
-    executiveSummary: 'ERP a medida que integra todas las áreas de tu negocio en tiempo real. Inversión única, sin mensualidades eternas. Escalabilidad sin contratar más personal.',
-    fullDescription: 'Sistema de gestión comercial diseñado 100% a medida de tus procesos reales. Integra ventas, inventario, contabilidad y operaciones en una plataforma unificada con reportes en tiempo real que te dan el control total de tu negocio sin depender de múltiples herramientas separadas.',
-    features: [
-      '✓ Módulos de ventas, inventario y contabilidad integrados',
-      '✓ Personalización total según tus flujos de trabajo',
-      '✓ Migración de datos desde tus sistemas actuales',
-      '✓ Reportes analytics en tiempo real para decisiones informadas',
-      '✓ Multiusuario y multi-sucursal sin límites',
-      '✓ Soporte y actualizaciones incluidas por 1 año'
-    ],
-    pricing: {
-      basic: 'Desde $3.700.000 CLP',
-      note: 'Precio no incluye impuestos. Inversión única, sin mensualidades eternas.'
-    },
-    timeline: '8-12 semanas',
-    deliverables: [
-      'Sistema ERP 100% funcional y testeado',
-      'Capacitación completa para todo el equipo',
-      'Documentación técnica completa + manual de usuario',
-      'Soporte 3 meses post-implementación incluido',
-      'Manual de usuario y video tutoriales'
-    ],
-    image: '/icono-erp.png',
-    detailImage: '/ss-erp.png',
-    cta: 'Ver más →'
-  },
-  {
-    id: 'inversion',
-    icon: TrendingUp,
-    title: 'Consultoría 1:1 - Técnicas y Estrategias para Aprender a Invertir en Bolsa',
-    problem: '¿Quieres invertir pero no sabes por dónde empezar?',
-    executiveSummary: 'Educación financiera práctica en sesión personalizada de 1 hora. Aprende a conocer tu perfil de inversor, entiende los mercados y toma decisiones informadas con criterio profesional.',
-    fullDescription: 'Sesión en vivo 1:1 donde evalúo tu capacidad de inversión, relación con el riesgo y te muestro las opciones disponibles: plataformas, brokers, costos y comisiones. Educación bursátil práctica sin promesas falsas de rentabilidad.',
-    features: [
-      '✓ Evaluación perfil inversor y riesgo',
-      '✓ Educación fundamentos bolsa',
-      '✓ Análisis plataformas y brokers',
-      '✓ Costos, comisiones, aspectos prácticos',
-      '✓ Estrategias de diversificación',
-      '✓ Gestión emocional del riesgo'
-    ],
-    pricing: {
-      session: '$37.000 CLP',
-      note: 'Precio no incluye impuestos. Sesión de 1 hora online.'
-    },
-    timeline: '1 hora (sesión online)',
-    deliverables: [
-      'Sesión personalizada 1:1',
-      'Material de apoyo descargable',
-      'Grabación de la sesión',
-      'Seguimiento por email 7 días'
-    ],
-    note: '* Servicio complementario - Requiere haber trabajado al menos 1 proyecto de transformación digital',
-    image: '/icono-inversion.png',
-    detailImage: '/ss-inversion.png',
-    cta: 'Ver más →'
-  },
-  {
-    id: 'redes-sociales',
-    icon: Share2,
-    title: 'Manejo de Redes Sociales',
-    problem: '¿Publicas constantemente pero tus redes no generan ventas?',
-    executiveSummary: 'Convierte tus seguidores en clientes. Estrategia de contenido diseñada para aumentar ventas, posicionarte como autoridad y fidelizar tu audiencia con publicaciones de alto valor.',
-    fullDescription: 'Deja de publicar por publicar. La mayoría de las empresas en redes sociales generan contenido sin estrategia y terminan agotadas sin resultados. Este servicio transforma tu presencia digital en un canal de ventas efectivo: evalúo tu situación actual, optimizo tus biografías para convertir visitantes en seguidores, y creo un plan de contenido mensual enfocado exclusivamente en tus objetivos de negocio. Desde la creación de piezas profesionales hasta la administración de campañas pagadas, todo trabaja para generar ROI real.',
-    features: [
-      '✓ Evaluación completa de tu presencia actual en redes sociales',
-      '✓ Optimización de biografías que convierten visitantes en seguidores calificados',
-      '✓ Plan de contenido mensual estratégico enfocado en resultados',
-      '✓ Creación profesional de contenido (diseño gráfico + copywriting persuasivo)',
-      '✓ Administración y optimización de campañas publicitarias pagadas',
-      '✓ Métricas semanales de crecimiento y conversión real'
-    ],
-    pricing: {
-      unique: 'Desde $370.000 CLP (pago único)',
-      monthly: 'Desde $127.000 CLP/mes (pago recurrente)',
-      note: 'Precio no incluye impuestos. Inversión en publicidad pagada no incluida.'
-    },
-    timeline: '1 semana de consultoría inicial + implementación inmediata',
-    deliverables: [
-      'Auditoría completa de redes sociales con informe detallado',
-      'Biografías optimizadas para conversión en todas tus plataformas',
-      'Plan de contenido mensual estratégico personalizado',
-      '12-15 piezas de contenido profesional por mes',
-      'Reporte semanal de métricas, alcance y conversiones',
-      'Soporte continuo y ajustes de estrategia según resultados'
-    ],
-    image: '/icono-rrss.png',
-    detailImage: '/ss-rrss.png',
-    cta: 'Ver más →'
-  },
+  }
 ]

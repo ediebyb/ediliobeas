@@ -26,21 +26,21 @@ export default function ServicesSection() {
             variants={fadeInUp}
             className="inline-block text-brand-primary font-semibold text-sm uppercase tracking-wider mb-3"
           >
-            Lo que puedo hacer por ti
+            Cada peso invertido debe generar más ventas
           </motion.span>
           <motion.h2
             id="services-heading"
             variants={fadeInUp}
             className="text-3xl sm:text-4xl font-heading font-bold text-brand-dark mb-4"
           >
-            Servicios para hacer crecer tu PyME
+            Servicios que transforman tu PyME en una máquina de ventas
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-gray-600 max-w-2xl mx-auto text-lg"
           >
-            Soluciones prácticas y personalizadas en marketing digital, tecnología y automatización
-            para que tu negocio sea más profesional y más competitivo.
+            No vendas menos de lo que puedes. Cada servicio está diseñado para que el retorno
+            supere la inversión en el menor tiempo posible.
           </motion.p>
         </motion.div>
 

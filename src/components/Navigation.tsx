@@ -25,7 +25,9 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 20)
 
       // Scroll spy - detectar seccion activa
-      const sections = NAV_LINKS.map(link => link.href.replace('#', ''))
+      const sections = NAV_LINKS
+        .filter(link => link.href.startsWith('#'))
+        .map(link => link.href.replace('#', ''))
       let current = 'inicio'
       
       for (const section of sections) {
@@ -53,16 +55,23 @@ export default function Navigation() {
 
 
   const handleNavClick = (e: React.MouseEvent, href: string) => {
+    // Page routes (start with /) — navigate directly
+    if (href.startsWith('/') && !href.startsWith('/#')) {
+      setIsMenuOpen(false)
+      navigate(href)
+      return
+    }
+
     e.preventDefault()
 
     if (isHomePage) {
-      // En home, hacer scroll directo
+      // On home, smooth scroll to section
       const target = document.querySelector(href)
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' })
       }
     } else {
-      // En subpágina, navegar a home con el hash
+      // On sub-page, go home with hash
       navigate(`/${href}`)
     }
 
@@ -120,8 +129,10 @@ export default function Navigation() {
           <ul className="hidden md:flex items-center space-x-2" role="list">
 
             {NAV_LINKS.map((link) => {
-
-              const isActive = activeSection === link.href.replace('#', '')
+              const isPageRoute = link.href.startsWith('/') && !link.href.startsWith('/#')
+              const isActive = isPageRoute
+                ? location.pathname.startsWith(link.href)
+                : activeSection === link.href.replace('#', '')
 
               return (
 

@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center justify-center">
         <Carousel />
 
-        {/* Prueba social - Métricas B2B */}
+        {/* Prueba social - Métricas ROI */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,12 +35,17 @@ export default function HeroSection() {
         >
           <div className="flex items-center gap-2">
             <span className="text-[#C5A059] font-bold text-2xl">+150</span>
-            <span className="text-white/70 text-sm">proyectos exitosos</span>
+            <span className="text-white/70 text-sm">PyMEs transformadas</span>
           </div>
           <div className="w-px h-8 bg-white/20 hidden md:block" />
           <div className="flex items-center gap-2">
             <span className="text-[#C5A059] font-bold text-2xl">+40%</span>
-            <span className="text-white/70 text-sm">ventas promedio en 90 días</span>
+            <span className="text-white/70 text-sm">más ventas en 90 días</span>
+          </div>
+          <div className="w-px h-8 bg-white/20 hidden md:block" />
+          <div className="flex items-center gap-2">
+            <span className="text-[#C5A059] font-bold text-2xl">15h+</span>
+            <span className="text-white/70 text-sm">recuperadas/semana por cliente</span>
           </div>
           <div className="w-px h-8 bg-white/20 hidden md:block" />
           <div className="flex items-center gap-2">

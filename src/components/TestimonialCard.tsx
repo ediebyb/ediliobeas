@@ -1,5 +1,5 @@
 import type { Testimonial } from '@/types'
-import { Quote } from 'lucide-react'
+import { Quote, TrendingUp } from 'lucide-react'
 
 interface TestimonialCardProps {
   testimonial: Testimonial
@@ -20,6 +20,14 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
       className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col h-full"
       aria-label={`Testimonio de ${testimonial.name}`}
     >
+      {/* Result badge */}
+      {testimonial.result && (
+        <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-4 self-start">
+          <TrendingUp size={14} className="text-green-600" aria-hidden="true" />
+          <span className="text-green-700 text-xs font-bold">{testimonial.result}</span>
+        </div>
+      )}
+
       {/* Ícono de cita */}
       <Quote size={32} className="text-brand-primary/20 mb-4 flex-shrink-0" aria-hidden="true" />
 
@@ -30,7 +38,6 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
       {/* Autor */}
       <footer className="flex items-center gap-3">
-        {/* Avatar */}
         {testimonial.avatar ? (
           <img
             src={testimonial.avatar}
@@ -47,7 +54,6 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
             </span>
           </div>
         )}
-
         <div>
           <cite className="not-italic font-semibold text-brand-dark text-sm">
             {testimonial.name}

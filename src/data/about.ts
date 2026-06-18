@@ -1,20 +1,18 @@
 import type { CredentialStat } from '@/types'
 
 export const STATS: CredentialStat[] = [
-  { value: '95%', label: 'Tasa de satisfacción de clientes', description: 'Clientes que recomiendan mis servicios' },
-  { value: '40%', label: 'Aumento promedio en ventas', description: 'En los primeros 3 meses de implementación' },
-  { value: '500+', label: 'Procesos automatizados', description: 'Horas ahorradas semanalmente a mis clientes' },
+  { value: '+150', label: 'PyMEs transformadas', description: 'Empresas que hoy venden más gracias a la transformación digital' },
+  { value: '+40%', label: 'Aumento en ventas', description: 'Promedio en los primeros 90 días de implementación' },
+  { value: '15h+', label: 'Horas recuperadas/semana', description: 'Por cliente, gracias a automatización de procesos repetitivos' },
   { value: '4', label: 'Países en LATAM', description: 'Chile, México, Colombia y Argentina' },
-  { value: '10+', label: 'Años de experiencia', description: 'Transformando PyMEs en la región' },
-  { value: '24/7', label: 'Soporte disponible', description: 'Siempre que me necesites, estoy aquí' },
+  { value: '10+', label: 'Años de experiencia', description: 'Especialista en marketing digital y transformación de PyMEs' },
+  { value: '95%', label: 'Clientes satisfechos', description: 'Que recomiendan los servicios a otros empresarios' },
 ]
 
-export const BIO = `Soy Edilio Beas, consultor especialista en marketing digital, transformación digital y tecnología para PyMEs en LATAM. Durante más de 10 años he ayudado a cientos de pequeñas y medianas empresas a crecer, optimizar sus procesos y competir en el mundo digital.
+export const BIO = `Soy Edilio Beas, Ingeniero Comercial con más de 10 años transformando PyMEs en LATAM en máquinas de venta digital. He trabajado con más de 150 empresas en Chile, México, Colombia y Argentina, y el patrón siempre es el mismo: negocios con potencial real que pierden ventas por no tener la tecnología correcta o la presencia digital que sus clientes esperan.
 
-Soy Ingeniero Comercial titulado con más de 10 años de experiencia ayudando a PyMEs en Latinoamérica. Además, cuento con 5 años de experiencia estudiando y analizando los mercados de valores en bolsa, lo que me permite tener una visión integral del negocio: desde la optimización operativa hasta la gestión financiera estratégica.
+Mi trabajo es traducir esa brecha en resultados concretos: más clientes encontrándote en Google, procesos que se ejecutan solos mientras tú duermes, y sistemas que escalan tu operación sin que tengas que contratar más personal.
 
-Mi enfoque combina la ingeniería comercial con la transformación digital para entregar soluciones que no solo mejoran tus procesos, sino que también maximizan tu rentabilidad y crecimiento sostenible.
+No vendo teoría. Cada solución que entrego está diseñada para que el retorno supere la inversión en el menor tiempo posible. Mis clientes no me contratan por lo que sé — me contratan por lo que logran después de trabajar conmigo.
 
-Mi enfoque es práctico y orientado a resultados: no te doy teoría, te doy soluciones que funcionan para tu negocio específico. Desde optimizar tu presencia en Google hasta implementar sistemas que automatizan tu operación, trabajo contigo para que tu empresa sea más eficiente, visible y rentable.
-
-Creo firmemente que toda PyME merece acceso a tecnología de calidad y estrategias que antes solo estaban al alcance de las grandes empresas. Esa es mi misión.`
+Si tu PyME genera más de $5M CLP al mes y sientes que deberías estar vendiendo mucho más, probablemente tengo la solución exacta que necesitas.`

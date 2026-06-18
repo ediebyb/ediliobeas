@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import type { FormData, FormErrors, FormStatus } from '@/types'
+import { SERVICES } from '@/data/services'
 import { validateForm } from '@/utils/formUtils'
 import { fadeInUp } from '@/utils/animations'
 
@@ -10,6 +11,7 @@ const INITIAL_DATA: FormData = {
   email: '',
   phone: '',
   message: '',
+  serviceInterest: '',
 }
 
 export default function ContactForm() {
@@ -46,8 +48,8 @@ export default function ContactForm() {
     setStatus('submitting')
 
     // Cloudflare Pages es estático - usar mailto: para enviar correo
-    const subject = `Nuevo mensaje de ${data.name} desde ediliobeas.com`
-    const body = `Nombre: ${data.name}\nEmail: ${data.email || 'No proporcionado'}\nTeléfono: ${data.phone}\n\nMensaje:\n${data.message}`
+    const subject = `Nuevo mensaje de ${data.name} desde ediliobeas.com${data.serviceInterest ? ` — ${data.serviceInterest}` : ''}`
+    const body = `Nombre: ${data.name}\nEmail: ${data.email || 'No proporcionado'}\nTeléfono: ${data.phone}\nServicio de interés: ${data.serviceInterest || 'No especificado'}\n\nMensaje:\n${data.message}`
     const mailtoLink = `mailto:edilio.beas@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
     // Simular delay para mostrar estado de carga
@@ -205,6 +207,26 @@ export default function ContactForm() {
         )}
       </div>
 
+      {/* Servicio de interés */}
+      <div>
+        <label htmlFor="serviceInterest" className="block text-sm font-medium text-brand-dark mb-1.5">
+          Servicio de interés <span className="text-gray-400 font-normal text-xs">(opcional)</span>
+        </label>
+        <select
+          id="serviceInterest"
+          name="serviceInterest"
+          value={data.serviceInterest ?? ''}
+          onChange={(e) => setData((prev) => ({ ...prev, serviceInterest: e.target.value }))}
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30 transition-colors duration-200 text-gray-700"
+        >
+          <option value="">¿Sobre qué servicio me contactas?</option>
+          {SERVICES.map((s) => (
+            <option key={s.id} value={s.title}>{s.title}</option>
+          ))}
+          <option value="Otro / No lo sé aún">Otro / No lo sé aún</option>
+        </select>
+      </div>
+
       {/* Mensaje */}
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-brand-dark mb-1.5">
@@ -233,6 +255,12 @@ export default function ContactForm() {
             {errors.message}
           </p>
         )}
+      </div>
+
+      {/* Honeypot anti-spam (hidden) */}
+      <div aria-hidden="true" className="hidden">
+        <label htmlFor="website">Website</label>
+        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
 
       {/* Botón de envío */}

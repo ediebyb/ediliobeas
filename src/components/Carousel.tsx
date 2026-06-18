@@ -14,29 +14,29 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    title: 'Transforma tu operación en ventas predecibles',
-    subtitle: 'Optimizamos tu presencia digital y automatizamos procesos clave para escalar tu PyME sin sobrecargar tu tiempo',
-    cta: 'Solicita tu consultoría estratégica gratuita',
+    title: 'Tu PyME pierde ventas cada día que no está bien posicionada en internet',
+    subtitle: 'Mientras lees esto, tus clientes te buscan en Google y encuentran a tu competencia. La transformación digital no es opcional — es la diferencia entre crecer y quedarse atrás.',
+    cta: 'Quiero dejar de perder clientes',
     icon: TrendingUp,
   },
   {
-    title: 'Más de 150 proyectos con resultados medibles',
-    subtitle: 'PyMEs en Chile, México, Colombia y Argentina escalan sin aumentar personal',
+    title: '150+ empresas en LATAM ya venden más. La tuya puede ser la siguiente.',
+    subtitle: 'Resultados reales, medibles y documentados en Chile, México, Colombia y Argentina.',
     stats: [
-      { value: '+150%', label: 'llamadas desde Google' },
+      { value: '+40%', label: 'ventas promedio en 90 días' },
       { value: '15h+', label: 'horas recuperadas/semana' },
-      { value: '40%', label: 'más leads calificados' },
+      { value: '150+', label: 'PyMEs transformadas' },
     ],
-    cta: 'Ver casos de éxito',
+    cta: 'Ver cómo lo logramos',
     icon: Award,
   },
   {
-    title: 'Consultoría estratégica gratuita',
-    subtitle: '30 minutos para identificar oportunidades de crecimiento y crear tu plan de acción personalizado',
+    title: 'Cada peso invertido en transformación digital debe generar más de un peso en ventas',
+    subtitle: 'Consultoría gratuita de 30 minutos. Sin compromiso. Con un plan de acción real para tu negocio específico.',
     bullets: [
-      'Auditoría digital completa',
-      'Plan de crecimiento predecible',
-      'Sin obligación de contratar',
+      'Diagnóstico digital completo de tu negocio',
+      'Identificación de las 3 mayores oportunidades de crecimiento',
+      'Plan de acción con ROI estimado — sin costo',
     ],
     cta: 'Agenda tu consultoría gratuita',
     icon: Calendar,

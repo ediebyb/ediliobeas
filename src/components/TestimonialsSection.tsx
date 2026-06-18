@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react'
-
 import { motion, AnimatePresence, PanInfo } from 'framer-motion'
-
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-
 import { TESTIMONIALS } from '@/data/testimonials'
-
 import { staggerContainer, fadeInUp } from '@/utils/animations'
-
+import { SETMORE_LINK } from '@/data/setmore'
 import TestimonialCard from './TestimonialCard'
 
 
@@ -403,6 +399,25 @@ export default function TestimonialsSection() {
           </div>
 
         </div>
+
+        {/* CTA final */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <p className="text-white/70 mb-4 text-lg">¿Quieres resultados así para tu negocio?</p>
+          <a
+            href={SETMORE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#C5A059] text-[#05121F] font-bold px-8 py-4 rounded-xl hover:bg-[#D4AF6A] transition-all duration-200 shadow-lg hover:shadow-[#C5A059]/30 hover:-translate-y-0.5"
+          >
+            Agenda tu consultoría gratuita →
+          </a>
+        </motion.div>
 
       </div>
 
