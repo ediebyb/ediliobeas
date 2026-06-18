@@ -18,6 +18,15 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
       },
+      keyframes: {
+        marquee: {
+          '0%':   { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-33.333%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
     },
   },
   plugins: [],

@@ -23,9 +23,9 @@ const slides: Slide[] = [
     title: '¿Tu negocio vive en tu cabeza, en un Excel y en WhatsApp?',
     subtitle: 'Ese modelo tiene un techo. Cuando pasas de 10 a 100 clientes, el caos se rompe. Yo instalo el ecosistema que escala tu operación sin depender de ti.',
     stats: [
-      { value: '+40%', label: 'ventas promedio en 90 días' },
-      { value: '15h+', label: 'recuperadas/semana por cliente' },
-      { value: '150+', label: 'PyMEs transformadas en LATAM' },
+      { value: '+40%', label: 'ventas en 90 días (clientes reportados)' },
+      { value: '15h+', label: 'recuperadas/semana por automatización' },
+      { value: '8+', label: 'años de experiencia en LATAM' },
     ],
     cta: 'Quiero escalar sin caos',
     icon: Award,

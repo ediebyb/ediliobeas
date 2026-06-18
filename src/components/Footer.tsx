@@ -30,10 +30,10 @@ export default function Footer() {
               className="h-12 w-auto mb-4 rounded-lg"
             />
             <h3 className="text-white font-bold text-lg mb-4">
-              ¿Listo para transformar tu PyME?
+              ¿Listo para digitalizar tu negocio?
             </h3>
             <p className="text-gray-400 mb-6 text-sm">
-              Únete a las 150+ PyMEs en LATAM que ya venden más y trabajan menos horas en tareas repetitivas.
+              Agenda tu diagnóstico digital gratuito de 30 minutos y descubre exactamente dónde tu negocio está perdiendo clientes hoy.
             </p>
             <a
               href={SETMORE_LINK}
@@ -94,7 +94,7 @@ export default function Footer() {
         {/* LÍNEA DIVISORIA */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-500 text-sm">
-            © {CURRENT_YEAR} Edilio Beas - Consultor PyME. Todos los derechos reservados.
+            © {CURRENT_YEAR} Edilio Beas - Consultor Digital. Todos los derechos reservados.
           </div>
           <div className="flex gap-6 text-sm text-gray-500">
             <a href="/terminos" className="hover:text-white transition-colors duration-300">Términos y Condiciones</a>

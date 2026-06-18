@@ -34,8 +34,8 @@ export default function HeroSection() {
           className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-10 text-center"
         >
           <div className="flex items-center gap-2">
-            <span className="text-[#C5A059] font-bold text-2xl">+150</span>
-            <span className="text-white/70 text-sm">PyMEs transformadas</span>
+            <span className="text-[#C5A059] font-bold text-2xl">8+</span>
+            <span className="text-white/70 text-sm">años de experiencia</span>
           </div>
           <div className="w-px h-8 bg-white/20 hidden md:block" />
           <div className="flex items-center gap-2">

@@ -8,7 +8,7 @@ interface SEOMetaProps {
   ogType?: 'website' | 'article'
 }
 
-const SITE_NAME = 'Edilio Beas — Consultor PyME LATAM'
+const SITE_NAME = 'Edilio Beas — Consultor Digital LATAM'
 const DEFAULT_IMAGE = '/og-image.jpg'
 const BASE_URL = 'https://ediliobeas.page.dev'
 
