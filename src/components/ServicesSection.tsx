@@ -26,21 +26,21 @@ export default function ServicesSection() {
             variants={fadeInUp}
             className="inline-block text-brand-primary font-semibold text-sm uppercase tracking-wider mb-3"
           >
-            Cada peso invertido debe generar más ventas
+            Tecnología que genera ROI, no tecnología por moda
           </motion.span>
           <motion.h2
             id="services-heading"
             variants={fadeInUp}
             className="text-3xl sm:text-4xl font-heading font-bold text-brand-dark mb-4"
           >
-            Servicios que transforman tu PyME en una máquina de ventas
+            Ecosistemas digitales que venden por ti
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-gray-600 max-w-2xl mx-auto text-lg"
           >
-            No vendas menos de lo que puedes. Cada servicio está diseñado para que el retorno
-            supere la inversión en el menor tiempo posible.
+            No hablo en código, hablo en ROI. Cada servicio está diseñado para que el retorno
+            supere la inversión — y para que puedas medirlo desde el primer mes.
           </motion.p>
         </motion.div>
 

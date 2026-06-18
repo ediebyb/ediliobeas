@@ -14,31 +14,31 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    title: 'Tu PyME pierde ventas cada día que no está bien posicionada en internet',
-    subtitle: 'Mientras lees esto, tus clientes te buscan en Google y encuentran a tu competencia. La transformación digital no es opcional — es la diferencia entre crecer y quedarse atrás.',
-    cta: 'Quiero dejar de perder clientes',
+    title: 'Sistemas, Webs y Estrategias que Venden por Ti',
+    subtitle: 'Digitaliza tu PyME sin lenguaje técnico complicado. Si tu competencia te gana en internet, yo equilibro la balanza — con tecnología accesible y estrategias que traen clientes a tu puerta o WhatsApp.',
+    cta: 'Agenda tu Diagnóstico Digital Gratis (30 min)',
     icon: TrendingUp,
   },
   {
-    title: '150+ empresas en LATAM ya venden más. La tuya puede ser la siguiente.',
-    subtitle: 'Resultados reales, medibles y documentados en Chile, México, Colombia y Argentina.',
+    title: '¿Tu negocio vive en tu cabeza, en un Excel y en WhatsApp?',
+    subtitle: 'Ese modelo tiene un techo. Cuando pasas de 10 a 100 clientes, el caos se rompe. Yo instalo el ecosistema que escala tu operación sin depender de ti.',
     stats: [
       { value: '+40%', label: 'ventas promedio en 90 días' },
-      { value: '15h+', label: 'horas recuperadas/semana' },
-      { value: '150+', label: 'PyMEs transformadas' },
+      { value: '15h+', label: 'recuperadas/semana por cliente' },
+      { value: '150+', label: 'PyMEs transformadas en LATAM' },
     ],
-    cta: 'Ver cómo lo logramos',
+    cta: 'Quiero escalar sin caos',
     icon: Award,
   },
   {
-    title: 'Cada peso invertido en transformación digital debe generar más de un peso en ventas',
-    subtitle: 'Consultoría gratuita de 30 minutos. Sin compromiso. Con un plan de acción real para tu negocio específico.',
+    title: 'Tu competencia aparece primero en Google. Tú no.',
+    subtitle: 'El 76% de las búsquedas "cerca de mí" terminan en visita ese mismo día. Si no estás en los 3 primeros resultados, no existes para ese cliente. Eso se arregla.',
     bullets: [
-      'Diagnóstico digital completo de tu negocio',
-      'Identificación de las 3 mayores oportunidades de crecimiento',
-      'Plan de acción con ROI estimado — sin costo',
+      'Diagnóstico digital completo de tu negocio sin costo',
+      'Identificación exacta de dónde estás perdiendo clientes',
+      'Plan de acción con ROI estimado — en 30 minutos',
     ],
-    cta: 'Agenda tu consultoría gratuita',
+    cta: 'Agenda tu consultoría gratuita ahora',
     icon: Calendar,
   },
 ]

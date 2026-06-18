@@ -28,7 +28,7 @@ export default function ClientsSection() {
             variants={fadeInUp}
             className="text-2xl md:text-3xl font-bold text-white"
           >
-            Más de 150 PyMEs en LATAM ya transformaron su negocio
+            Negocios que dejaron el caos operativo atrás
           </motion.h2>
         </motion.div>
 

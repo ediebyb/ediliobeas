@@ -247,7 +247,7 @@ export default function ContactForm() {
               ? 'border-red-400 bg-red-50 focus:border-red-400'
               : 'border-gray-200 bg-white focus:border-brand-primary'
           }`}
-          placeholder="Cuéntame: ¿Cuál es el mayor desafío de tu negocio hoy? Te leeré y responderé en menos de 24h."
+          placeholder="Cuéntame: ¿De qué se trata tu negocio y cuál es tu mayor desafío digital hoy? Te leeré y responderé en menos de 24h."
         />
         {errors.message && (
           <p id="message-error" className="mt-1.5 text-sm text-red-600 flex items-center gap-1" role="alert">

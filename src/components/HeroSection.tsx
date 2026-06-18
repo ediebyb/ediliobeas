@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center justify-center">
         <Carousel />
 
-        {/* Prueba social - Métricas ROI */}
+        {/* Prueba social — copy del mKTG */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
