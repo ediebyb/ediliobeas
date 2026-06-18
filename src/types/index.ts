@@ -24,6 +24,7 @@ export interface Service {
   deliverables: string[]
   note?: string
   image: string
+  detailImage?: string
   cta: string
 }
 

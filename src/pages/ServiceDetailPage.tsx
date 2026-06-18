@@ -178,12 +178,12 @@ export default function ServiceDetailPage() {
               </div>
 
               {/* Imagen del servicio */}
-              {service.image && (
+              {(service.detailImage || service.image) && (
                 <div className="rounded-xl overflow-hidden border border-white/10">
                   <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-64 object-cover"
+                    src={service.detailImage ?? service.image}
+                    alt={`Propuesta ${service.title}`}
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               )}

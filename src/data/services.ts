@@ -29,7 +29,8 @@ export const SERVICES: Service[] = [
       'Galería de 10+ fotos profesionales optimizadas',
       'Plan de contenido mensual enfocado en conversiones'
     ],
-    image: '/google maps.png',
+    image: '/icono-google-maps.png',
+    detailImage: '/ss-google-maps.png',
     cta: 'Ver más →'
   },
   {
@@ -60,7 +61,8 @@ export const SERVICES: Service[] = [
       'Capacitación de uso incluida + guía de mejora continua',
       '30 días de soporte gratuito post-lanzamiento'
     ],
-    image: '/pag web.png',
+    image: '/icono-pagweb.png',
+    detailImage: '/ss-pagweb.png',
     cta: 'Ver más →'
   },
   {
@@ -90,7 +92,8 @@ export const SERVICES: Service[] = [
       'Soporte 3 meses post-lanzamiento',
       'Manual de usuario'
     ],
-    image: '/app.png',
+    image: '/icono-app.png',
+    detailImage: '/ss-app.png',
     cta: 'Ver más →'
   },
   {
@@ -119,7 +122,8 @@ export const SERVICES: Service[] = [
       'Capacitación del equipo incluida',
       'Soporte técnico 1 mes post-implementación'
     ],
-    image: '/sheet.png',
+    image: '/icono-sheets.png',
+    detailImage: '/ss-sheets.png',
     cta: 'Ver más →'
   },
   {
@@ -149,7 +153,8 @@ export const SERVICES: Service[] = [
       'Soporte 3 meses post-implementación incluido',
       'Manual de usuario y video tutoriales'
     ],
-    image: '/erp.png',
+    image: '/icono-erp.png',
+    detailImage: '/ss-erp.png',
     cta: 'Ver más →'
   },
   {
@@ -179,7 +184,8 @@ export const SERVICES: Service[] = [
       'Seguimiento por email 7 días'
     ],
     note: '* Servicio complementario - Requiere haber trabajado al menos 1 proyecto de transformación digital',
-    image: '/inversion.png',
+    image: '/icono-inversion.png',
+    detailImage: '/ss-inversion.png',
     cta: 'Ver más →'
   },
   {
@@ -211,7 +217,8 @@ export const SERVICES: Service[] = [
       'Reporte semanal de métricas, alcance y conversiones',
       'Soporte continuo y ajustes de estrategia según resultados'
     ],
-    image: '/rrss.png',
+    image: '/icono-rrss.png',
+    detailImage: '/ss-rrss.png',
     cta: 'Ver más →'
   },
 ]
