@@ -46,21 +46,21 @@ export default function AboutSection() {
               {/* Foto de perfil */}
               <div className="relative">
                 <img
-                  src="/Perfil.jpg"
-                  alt="Foto de Edilio Beas"
+                  src="/perfil-edie.jpg"
+                  alt="Foto de Edilio Beas — Consultor Digital"
                   className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-cover shadow-2xl"
                 />
 
                 {/* Badge flotante 1 - Experiencia */}
                 <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 bg-[#C5A059] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold">10+</div>
+                  <div className="text-xl md:text-2xl font-bold">8+</div>
                   <div className="text-xs">Años de experiencia</div>
                 </div>
 
-                {/* Badge flotante 2 - Proyectos */}
+                {/* Badge flotante 2 */}
                 <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 bg-[#05121F] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold">150+</div>
-                  <div className="text-xs">Proyectos exitosos</div>
+                  <div className="text-xl md:text-2xl font-bold">4</div>
+                  <div className="text-xs">Países en LATAM</div>
                 </div>
 
                 {/* Elemento decorativo - Líneas doradas */}
@@ -69,12 +69,21 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Logo - mismo tamaño que foto, solo con fondo azul */}
+              {/* Logo oficial */}
               <img
                 src="/logo_oficial_digital.png"
-                alt="Edilio Beas Logo"
+                alt="Edilio Beas — Consultor Digital"
                 className="w-64 h-64 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-3xl object-contain shadow-2xl bg-[#05121F] p-4"
               />
+
+              {/* Banner de autoridad */}
+              <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-[#C5A059]/20">
+                <img
+                  src="/banner-autoridad.png"
+                  alt="Edilio Beas — Consultor Digital LATAM"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
 
             {/* Métricas en medio */}
