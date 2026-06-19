@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Calendar, Tag } from 'lucide-react'
@@ -5,6 +6,80 @@ import { SERVICES } from '@/data/services'
 import { staggerContainer, fadeInUp } from '@/utils/animations'
 import ServiceCard from './ServiceCard'
 import { SETMORE_LINK } from '@/data/setmore'
+
+const CONSULTORIA_IMAGES = [
+  { src: '/ss-consultoria.png', alt: 'Propuesta de consultoría digital — Edilio Beas' },
+  { src: '/icono-consultoria.png', alt: '1ª Consultoría Digital Gratuita — 30 minutos' },
+]
+
+function ConsultoriaCarousel() {
+  const [idx, setIdx] = useState(0)
+  const timer = useRef<NodeJS.Timeout | null>(null)
+
+  useEffect(() => {
+    timer.current = setInterval(() => setIdx(i => (i + 1) % CONSULTORIA_IMAGES.length), 4000)
+    return () => { if (timer.current) clearInterval(timer.current) }
+  }, [])
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="mb-14 bg-gradient-to-br from-[#05121F] via-[#0a1f35] to-[#05121F] border-2 border-[#C5A059]/60 rounded-2xl overflow-hidden shadow-xl shadow-[#C5A059]/10"
+    >
+      <div className="flex flex-col lg:flex-row min-h-[240px]">
+
+        {/* LEFT 50%: Image carousel */}
+        <div className="relative lg:w-1/2 min-h-[200px] lg:min-h-[240px] overflow-hidden bg-[#03090F] flex items-center justify-center">
+          {CONSULTORIA_IMAGES.map((img, i) => (
+            <img
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
+              className={`absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-700 ${
+                i === idx ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ))}
+          {/* dots */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+            {CONSULTORIA_IMAGES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIdx(i)}
+                className={`w-2 h-2 rounded-full transition-all ${i === idx ? 'bg-[#C5A059] w-5' : 'bg-white/30'}`}
+                aria-label={`Imagen ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* RIGHT 50%: Text + CTA */}
+        <div className="lg:w-1/2 p-8 flex flex-col justify-center gap-4">
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="text-[#C5A059] font-bold text-xl uppercase tracking-wide">1ª Consultoría Gratuita</span>
+            <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">$0 — GRATIS</span>
+          </div>
+          <p className="text-white font-semibold text-lg">30 minutos por WhatsApp o Google Meet</p>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            Analizamos tu negocio juntos y definimos exactamente qué necesitas para vender más y trabajar menos. Sin compromiso. Sin letra chica.
+          </p>
+          <a
+            href={SETMORE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-7 py-4 bg-[#C5A059] text-white font-bold rounded-xl hover:bg-[#D4AF6A] transition-all duration-200 shadow-lg hover:shadow-[#C5A059]/30 self-start"
+          >
+            <Calendar size={20} />
+            Agendar ahora — Es gratis
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
 
 const CARTA = ['google-perfil', 'whatsapp-business', 'redes-sociales-ia', 'pagina-web-basica']
 const PACK = ['pack-posicionamiento']
@@ -43,36 +118,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* 1ª Consultoría Gratuita */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-14 bg-gradient-to-br from-[#05121F] via-[#0a1f35] to-[#05121F] border-2 border-[#C5A059]/60 rounded-2xl p-8 shadow-xl shadow-[#C5A059]/10"
-        >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="flex items-start gap-5">
-              <img src="/icono-consultoria.png" alt="Consultoría gratuita" className="w-20 h-20 object-contain flex-shrink-0" />
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-[#C5A059] font-bold text-xl uppercase tracking-wide">1ª Consultoría Gratuita</span>
-                  <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">$0 — GRATIS</span>
-                </div>
-                <p className="text-white font-medium text-lg mb-1">30 minutos por WhatsApp o Google Meet</p>
-                <p className="text-gray-300 text-sm">Analizamos tu negocio juntos y definimos exactamente qué necesitas para vender más y trabajar menos. Sin compromiso. Sin letra chica.</p>
-              </div>
-            </div>
-            <a
-              href={SETMORE_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#C5A059] text-white font-bold rounded-xl hover:bg-[#D4AF6A] transition-all duration-200 shadow-lg hover:shadow-[#C5A059]/30 whitespace-nowrap text-base"
-            >
-              <Calendar size={20} />
-              Agendar ahora — Es gratis
-            </a>
-          </div>
-        </motion.div>
+        <ConsultoriaCarousel />
 
         {/* SERVICIOS A LA CARTA */}
         <motion.div
