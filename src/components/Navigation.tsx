@@ -84,10 +84,10 @@ export default function Navigation() {
 
     <header
 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-tech-blue ${
-
-        isScrolled ? 'backdrop-blur-md border-b border-white/10' : 'backdrop-blur-md border-b border-white/10'
-
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-[#05121F]/95 backdrop-blur-md shadow-lg shadow-black/20 border-b border-white/10'
+          : 'bg-[#05121F]/80 backdrop-blur-sm border-b border-white/5'
       }`}
 
     >
@@ -117,8 +117,8 @@ export default function Navigation() {
           >
             <img
               src="/logomini.png"
-              alt="Edilio Beas Logo"
-              className="h-12 w-auto rounded-lg bg-[#05121F]"
+              alt="Edilio Beas — Consultor Digital"
+              className="h-12 w-auto rounded-lg"
             />
           </Link>
 

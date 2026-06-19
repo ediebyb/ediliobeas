@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import ScrollToTop from '@/components/ScrollToTop'
 import HomePage from '@/pages/HomePage'
 import ServicesListPage from '@/pages/ServicesListPage'
 import ServiceDetailPage from '@/pages/ServiceDetailPage'
@@ -9,6 +10,7 @@ import ComingSoonPage from '@/pages/ComingSoonPage'
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios" element={<ServicesListPage />} />

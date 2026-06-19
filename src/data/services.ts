@@ -64,7 +64,7 @@ export const SERVICES: Service[] = [
   {
     id: 'redes-sociales-ia',
     icon: Share2,
-    title: 'Optimización 2 RRSS + IA',
+    title: 'Optimización 2 RRSS con IA',
     problem: '¿Tus redes sociales tienen seguidores pero no generan ventas reales?',
     executiveSummary: 'Optimizo 2 de tus redes sociales con contenido generado con IA para que publiques de forma consistente sin dedicarle horas. Bios que convierten, contenido que vende.',
     fullDescription: 'Optimización completa de 2 redes sociales de tu elección (Instagram, Facebook, TikTok, LinkedIn): bios reescritas con keywords para algoritmos e IA, plan de contenido mensual con piezas creadas con IA, y estrategia de hashtags que maximiza el alcance orgánico. Tus redes empiezan a trabajar por ti.',
@@ -125,7 +125,7 @@ export const SERVICES: Service[] = [
     icon: Package,
     title: 'Pack Posicionamiento — Todo lo que necesitas para dominar tu mercado local',
     problem: '¿Quieres el paquete completo a precio especial?',
-    executiveSummary: 'Google Perfil + WhatsApp Business Pro + 2 RRSS + IA + Web Básica en un solo pack con 44% de descuento. Solo 3 cupos por mes. Ahorro real de $200.000 CLP vs contratar cada servicio por separado.',
+    executiveSummary: 'Google Perfil Mi Negocio + WhatsApp Business Pro + Optimización 2 RRSS con IA + Pág. Web Básica en un solo pack con 44% de descuento. Solo 3 cupos por mes. Ahorro real de $200.000 CLP vs contratar cada servicio por separado.',
     fullDescription: 'El Pack Posicionamiento reúne los 4 servicios fundamentales para que tu negocio sea encontrado, confíe y venda: perfil de Google optimizado para aparecer primero, WhatsApp Business profesional que cierra ventas solo, 2 redes sociales con contenido IA que construyen autoridad, y una página web básica que da credibilidad. Todo integrado y trabajando en conjunto.',
     features: [
       '✓ Google Perfil Empresa optimizado (valor: $130.000)',

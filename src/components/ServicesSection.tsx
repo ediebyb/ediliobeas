@@ -32,13 +32,13 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <motion.span variants={fadeInUp} className="inline-block text-brand-primary font-semibold text-sm uppercase tracking-wider mb-3">
-            Tecnología que genera ROI, no tecnología por moda
+            Tecnología que genera Retorno sobre la Inversión, no tecnología por moda
           </motion.span>
           <motion.h2 id="services-heading" variants={fadeInUp} className="text-3xl sm:text-4xl font-heading font-bold text-brand-dark mb-4">
             Ecosistemas digitales que venden por ti
           </motion.h2>
           <motion.p variants={fadeInUp} className="text-gray-600 max-w-2xl mx-auto text-lg">
-            No hablo en código, hablo en ROI. Cada servicio está diseñado para que el retorno supere la inversión — y para que puedas medirlo desde el primer mes.
+            No hablo en código, hablo en Retorno sobre la Inversión. Cada servicio está diseñado para que el retorno supere la inversión — y para que puedas medirlo desde el primer mes.
           </motion.p>
         </motion.div>
 

@@ -35,7 +35,7 @@ export default function HeroSection() {
         >
           <div className="flex items-center gap-2">
             <span className="text-[#C5A059] font-bold text-2xl">8+</span>
-            <span className="text-white/70 text-sm">años de experiencia</span>
+            <span className="text-white/70 text-sm">años experiencia profesional</span>
           </div>
           <div className="w-px h-8 bg-white/20 hidden md:block" />
           <div className="flex items-center gap-2">
@@ -45,12 +45,12 @@ export default function HeroSection() {
           <div className="w-px h-8 bg-white/20 hidden md:block" />
           <div className="flex items-center gap-2">
             <span className="text-[#C5A059] font-bold text-2xl">15h+</span>
-            <span className="text-white/70 text-sm">recuperadas/semana por cliente</span>
+            <span className="text-white/70 text-sm">recuperadas/semana</span>
           </div>
           <div className="w-px h-8 bg-white/20 hidden md:block" />
-          <div className="flex items-center gap-2">
-            <span className="text-[#C5A059] font-bold text-2xl">4</span>
-            <span className="text-white/70 text-sm">países en LATAM</span>
+          <div className="flex flex-col items-center">
+            <span className="text-[#C5A059] font-bold text-sm">🇨🇱 Presencia en Chile</span>
+            <span className="text-white/70 text-xs">Marketing · Ventas · Gestión Digital</span>
           </div>
         </motion.div>
       </div>

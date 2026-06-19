@@ -54,13 +54,13 @@ export default function AboutSection() {
                 {/* Badge flotante 1 - Experiencia */}
                 <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 bg-[#C5A059] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
                   <div className="text-xl md:text-2xl font-bold">8+</div>
-                  <div className="text-xs">Años de experiencia</div>
+                  <div className="text-xs">Años experiencia profesional</div>
                 </div>
 
                 {/* Badge flotante 2 */}
-                <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 bg-[#05121F] text-white px-4 py-2 md:px-5 md:py-2 rounded-xl shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold">4</div>
-                  <div className="text-xs">Países en LATAM</div>
+                <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 bg-[#05121F] text-white px-3 py-2 md:px-4 md:py-2 rounded-xl shadow-xl">
+                  <div className="text-xs font-bold">Marketing · Ventas</div>
+                  <div className="text-xs">Gestión Digital</div>
                 </div>
 
                 {/* Elemento decorativo - Líneas doradas */}
@@ -185,7 +185,7 @@ export default function AboutSection() {
               className="text-2xl md:text-3xl font-heading font-bold text-brand-dark leading-tight"
             >
               Consultor especialista en{' '}
-              <span className="text-brand-primary">PyMEs de LATAM</span>
+              <span className="text-brand-primary">Marketing · Ventas · Gestión Digital PyMEs</span>
             </motion.h2>
 
             <motion.div variants={fadeInUp} className="space-y-3">

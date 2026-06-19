@@ -198,31 +198,13 @@ export default function ContactSection() {
               />
             </div>
 
-            {/* Disponibilidad */}
-
-            <div className="bg-brand-primary/5 rounded-2xl p-6 border border-brand-primary/10">
-
-              <h4 className="font-heading font-semibold text-brand-dark mb-2">
-
-                Horario de atención
-
-              </h4>
-
-              <p className="text-gray-600 text-sm">
-
-                Lunes a Viernes: 9:00 – 17:00 (hora Chile)
-
-              </p>
-
-            </div>
-
-            {/* Sección de Redes Sociales - 9 iconos */}
-
-            <div className="mt-8">
-
-              <h4 className="text-[#05121F] font-semibold mb-4">Sígueme en:</h4>
-
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+            {/* Redes Sociales + Horario lado a lado */}
+            <div className="mt-4">
+              <div className="flex flex-col lg:flex-row gap-6 items-start">
+                {/* Redes sociales */}
+                <div className="flex-1">
+                  <h4 className="text-[#05121F] font-semibold mb-4">Sígueme en:</h4>
+                  <div className="grid grid-cols-5 gap-3">
 
                 <a
 
@@ -433,7 +415,26 @@ export default function ContactSection() {
                 </a>
 
               </div>
+                </div>
 
+                {/* Horario de atención — al costado derecho de las redes */}
+                <div className="lg:w-48 flex-shrink-0">
+                  <div className="bg-brand-primary/5 rounded-2xl p-5 border border-brand-primary/10 h-full">
+                    <h4 className="font-heading font-semibold text-brand-dark mb-3 text-sm">
+                      Horario de atención
+                    </h4>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Lunes a Viernes<br />
+                      <span className="font-semibold text-brand-dark">9:00 – 18:00</span><br />
+                      <span className="text-gray-500">(hora Chile)</span>
+                    </p>
+                    <div className="mt-3 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      <span className="text-xs text-green-600 font-medium">Disponible ahora</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </motion.div>
