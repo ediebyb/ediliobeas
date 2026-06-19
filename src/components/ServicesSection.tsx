@@ -38,7 +38,7 @@ export default function ServicesSection() {
             Ecosistemas digitales que venden por ti
           </motion.h2>
           <motion.p variants={fadeInUp} className="text-gray-600 max-w-2xl mx-auto text-lg">
-            No hablo en código, hablo en Retorno sobre la Inversión. Cada servicio está diseñado para que el retorno supere la inversión — y para que puedas medirlo desde el primer mes.
+            No hablo en código, hablo en Retorno sobre la Inversión. Cada servicio está diseñado para que lo que ganas supere lo que inviertes — desde el primer mes.
           </motion.p>
         </motion.div>
 
@@ -48,29 +48,30 @@ export default function ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-12 bg-gradient-to-r from-[#C5A059]/20 to-[#C5A059]/5 border border-[#C5A059]/40 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6"
+          className="mb-14 bg-gradient-to-br from-[#05121F] via-[#0a1f35] to-[#05121F] border-2 border-[#C5A059]/60 rounded-2xl p-8 shadow-xl shadow-[#C5A059]/10"
         >
-          <div className="flex items-center gap-4">
-            <img src="/icono-consultoria.png" alt="Consultoría gratuita" className="w-16 h-16 object-contain flex-shrink-0" />
-            <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-2xl">🎁</span>
-              <span className="text-[#C5A059] font-bold text-lg uppercase tracking-wide">1ª Consultoría Gratuita</span>
-              <span className="bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">GRATIS</span>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="flex items-start gap-5">
+              <img src="/icono-consultoria.png" alt="Consultoría gratuita" className="w-20 h-20 object-contain flex-shrink-0" />
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-[#C5A059] font-bold text-xl uppercase tracking-wide">1ª Consultoría Gratuita</span>
+                  <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">$0 — GRATIS</span>
+                </div>
+                <p className="text-white font-medium text-lg mb-1">30 minutos por WhatsApp o Google Meet</p>
+                <p className="text-gray-300 text-sm">Analizamos tu negocio juntos y definimos exactamente qué necesitas para vender más y trabajar menos. Sin compromiso. Sin letra chica.</p>
+              </div>
             </div>
-            <p className="text-brand-dark font-medium">30 minutos por WhatsApp o Google Meet — analizamos tu negocio y definimos exactamente qué necesitas.</p>
-            <p className="text-gray-500 text-sm mt-1">Sin compromiso. Sin letra chica. Solo claridad sobre tu próximo paso digital.</p>
+            <a
+              href={SETMORE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#C5A059] text-white font-bold rounded-xl hover:bg-[#D4AF6A] transition-all duration-200 shadow-lg hover:shadow-[#C5A059]/30 whitespace-nowrap text-base"
+            >
+              <Calendar size={20} />
+              Agendar ahora — Es gratis
+            </a>
           </div>
-          </div>
-          <a
-            href={SETMORE_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#C5A059] text-white font-semibold rounded-xl hover:bg-[#D4AF6A] transition-all duration-200 shadow-lg hover:shadow-[#C5A059]/30 whitespace-nowrap"
-          >
-            <Calendar size={18} />
-            Agendar ahora
-          </a>
         </motion.div>
 
         {/* SERVICIOS A LA CARTA */}

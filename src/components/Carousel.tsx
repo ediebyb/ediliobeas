@@ -25,7 +25,7 @@ const slides: Slide[] = [
     stats: [
       { value: '+40%', label: 'ventas en 90 días (clientes reportados)' },
       { value: '15h+', label: 'recuperadas/semana por automatización' },
-      { value: '8+', label: 'años de experiencia en LATAM' },
+      { value: '8+', label: 'años de experiencia profesional' },
     ],
     cta: 'Quiero escalar sin caos',
     icon: Award,
@@ -36,7 +36,7 @@ const slides: Slide[] = [
     bullets: [
       'Diagnóstico digital completo de tu negocio sin costo',
       'Identificación exacta de dónde estás perdiendo clientes',
-      'Plan de acción con ROI estimado — en 30 minutos',
+      'Plan de Acción Personalizado — en 30 minutos',
     ],
     cta: 'Agenda tu consultoría gratuita ahora',
     icon: Calendar,

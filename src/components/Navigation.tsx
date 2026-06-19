@@ -55,7 +55,7 @@ export default function Navigation() {
 
 
   const handleNavClick = (e: React.MouseEvent, href: string) => {
-    // Page routes (start with /) — navigate directly
+    // Page routes (start with / but not /#) — navigate directly
     if (href.startsWith('/') && !href.startsWith('/#')) {
       setIsMenuOpen(false)
       navigate(href)
@@ -66,12 +66,13 @@ export default function Navigation() {
 
     if (isHomePage) {
       // On home, smooth scroll to section
-      const target = document.querySelector(href)
+      const sectionId = href.replace('#', '').replace('/', '')
+      const target = document.getElementById(sectionId)
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' })
       }
     } else {
-      // On sub-page, go home with hash
+      // On sub-page, navigate to home with hash — ScrollToTop will handle the scroll
       navigate(`/${href}`)
     }
 

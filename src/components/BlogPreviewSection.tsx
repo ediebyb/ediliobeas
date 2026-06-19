@@ -55,6 +55,7 @@ export default function BlogPreviewSection() {
               variants={fadeInUp}
               className="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col bg-white"
             >
+              <Link to={`/blog/${post.slug}`} className="flex flex-col flex-1 no-underline">
               {post.image && (
                 <div className="h-48 overflow-hidden bg-[#05121F]">
                   <img
@@ -79,14 +80,12 @@ export default function BlogPreviewSection() {
                   {post.title}
                 </h3>
                 <p className="text-gray-500 text-sm line-clamp-2 mb-6 flex-1">{post.excerpt}</p>
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-[#05121F] font-semibold text-sm hover:text-[#C5A059] transition-colors group/btn"
-                >
+                <span className="inline-flex items-center gap-2 text-[#05121F] font-semibold text-sm group-hover:text-[#C5A059] transition-colors">
                   Leer artículo
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
               </div>
+              </Link>
             </motion.article>
           ))}
         </motion.div>

@@ -60,21 +60,7 @@ export default function BlogPostPage() {
           </p>
         </motion.div>
 
-        {/* AI disclaimer */}
-        {post.aiGenerated && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-start gap-3 bg-[#C5A059]/10 border border-[#C5A059]/30 rounded-xl p-4 mb-10"
-          >
-            <Bot className="w-5 h-5 text-[#C5A059] flex-shrink-0 mt-0.5" />
-            <p className="text-sm text-gray-300">
-              <strong className="text-[#C5A059]">Artículo generado con asistencia de IA.</strong>{' '}
-              Las fuentes académicas y datos citados han sido verificados manualmente por el autor antes de la publicación.
-            </p>
-          </motion.div>
-        )}
+        {/* AI disclaimer — removed from top, shown at bottom */}
 
         {/* Hero image */}
         {post.image && (
@@ -96,9 +82,10 @@ export default function BlogPostPage() {
           className="prose prose-invert prose-lg max-w-none
             prose-headings:text-white prose-headings:font-bold
             prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-[#C5A059]
-            prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-4
+            prose-p:text-white prose-p:leading-relaxed prose-p:mb-4
             prose-strong:text-white prose-strong:font-semibold
-            prose-ul:text-gray-300 prose-li:mb-2
+            prose-ul:text-white prose-li:mb-2 prose-li:text-white
+            prose-ol:text-white
             prose-a:text-[#C5A059] prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
@@ -131,6 +118,21 @@ export default function BlogPostPage() {
               ))}
             </ol>
           </motion.section>
+        )}
+
+        {/* AI disclaimer — moved to bottom, small */}
+        {post.aiGenerated && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="mt-8 pt-6 border-t border-white/10"
+          >
+            <p className="text-xs text-gray-500 italic flex items-center gap-2">
+              <Bot className="w-3 h-3 text-gray-500 flex-shrink-0" />
+              Artículo generado con asistencia de IA. Las fuentes académicas y datos citados han sido verificados manualmente por el autor antes de la publicación.
+            </p>
+          </motion.div>
         )}
 
         {/* CTA */}

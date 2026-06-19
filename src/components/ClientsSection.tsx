@@ -37,8 +37,7 @@ export default function ClientsSection() {
             variants={fadeInUp}
             className="text-gray-400 mt-3 text-sm max-w-xl mx-auto"
           >
-            Empresas a las que les he enviado trabajos, pedido su opinión y que aceptaron
-            aparecer aquí para que también tengan visibilidad extra.
+            Negocios con los que he trabajado y que decidieron aparecer aquí para ganar visibilidad digital extra.
           </motion.p>
         </motion.div>
       </div>
