@@ -29,7 +29,7 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-        {/* GRID PRINCIPAL: 3 columnas en desktop */}
+        {/* GRID PRINCIPAL: Logo | RRSS+Horario (centro) | Nav+Pagos (derecha) */}
         <div className="grid md:grid-cols-3 gap-8 mb-10">
 
           {/* COL 1: Logo + CTA */}
@@ -37,26 +37,46 @@ export default function Footer() {
             <img src="/logomini.png" alt="Edilio Beas — Consultor Digital" className="h-12 w-auto mb-4 rounded-lg" />
             <h3 className="text-white font-bold text-lg mb-3">¿Listo para digitalizar tu negocio?</h3>
             <p className="text-gray-400 mb-5 text-sm">
-              Agenda tu diagnóstico digital gratuito de 30 minutos y descubre exactamente dónde tu negocio está perdiendo clientes hoy.
+              Agenda tu diagnóstico digital gratuito de 30 minutos.
             </p>
-            <a
-              href={SETMORE_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href={SETMORE_LINK} target="_blank" rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-[#C5A059] text-white px-5 py-3 rounded-lg font-semibold hover:bg-[#D4AF6A] transition-all duration-300 hover:shadow-lg hover:shadow-[#C5A059]/30"
             >
               Agenda tu consultoría
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <div className="mt-5 flex items-center gap-2 text-sm text-gray-500">
-              <div className="p-1 rounded bg-[#C5A059]/20">
-                <Shield className="w-4 h-4 text-[#C5A059]" />
-              </div>
+              <div className="p-1 rounded bg-[#C5A059]/20"><Shield className="w-4 h-4 text-[#C5A059]" /></div>
               <span>Confidencialidad 100% garantizada</span>
             </div>
           </div>
 
-          {/* COL 2: Navegación + Métodos de Pago */}
+          {/* COL 2 (CENTRO): Redes Sociales + Horario */}
+          <div>
+            <h4 className="text-white font-semibold mb-3">Sígueme en</h4>
+            <div className="grid grid-cols-4 gap-2 mb-5">
+              {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
+                <a key={label} href={href} target={href.startsWith('mailto') ? undefined : '_blank'} rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex flex-col items-center gap-1 p-2 rounded-xl bg-white/5 hover:bg-[#C5A059]/20 border border-white/10 hover:border-[#C5A059]/40 transition-all duration-200 group"
+                >
+                  <Icon className="w-4 h-4 text-white/70 group-hover:text-[#C5A059] transition-colors" />
+                  <span className="text-xs text-white/40 group-hover:text-[#C5A059]/80 transition-colors leading-none">{label}</span>
+                </a>
+              ))}
+            </div>
+            <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+              <h5 className="text-white/70 text-xs font-semibold uppercase tracking-widest mb-2">Horario de atención</h5>
+              <p className="text-white text-sm font-medium">Lunes – Viernes</p>
+              <p className="text-[#C5A059] text-sm font-bold">9:00 – 18:00 hrs (Chile)</p>
+              <div className="flex items-center gap-2 mt-2">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="text-xs text-green-400">Disponible ahora</span>
+              </div>
+            </div>
+          </div>
+
+          {/* COL 3 (DERECHA): Navegación + Métodos de Pago */}
           <div className="flex flex-col gap-6">
             <div>
               <h4 className="text-white font-semibold mb-3">Navegación</h4>
@@ -71,11 +91,7 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-semibold mb-3">Métodos de pago</h4>
               <div className="flex flex-col gap-2">
-                {[
-                  { icon: CreditCard, label: 'PayPal' },
-                  { icon: Bitcoin, label: 'Criptomonedas' },
-                  { icon: Landmark, label: 'Transferencia Bancaria' },
-                ].map(({ icon: Icon, label }) => (
+                {[{ icon: CreditCard, label: 'PayPal' }, { icon: Bitcoin, label: 'Criptomonedas' }, { icon: Landmark, label: 'Transferencia Bancaria' }].map(({ icon: Icon, label }) => (
                   <div key={label} className="group flex items-center gap-3 text-gray-300 hover:text-[#C5A059] transition-all duration-300">
                     <div className="p-1.5 rounded-lg bg-white/5 group-hover:bg-[#C5A059]/20 transition-colors duration-300">
                       <Icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
@@ -83,37 +99,6 @@ export default function Footer() {
                     <span className="text-sm">{label}</span>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-
-          {/* COL 3: Redes Sociales + Horario */}
-          <div>
-            <h4 className="text-white font-semibold mb-3">Sígueme en</h4>
-            <div className="grid grid-cols-4 gap-2 mb-5">
-              {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith('mailto') ? undefined : '_blank'}
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex flex-col items-center gap-1 p-2 rounded-xl bg-white/5 hover:bg-[#C5A059]/20 border border-white/10 hover:border-[#C5A059]/40 transition-all duration-200 group"
-                >
-                  <Icon className="w-4 h-4 text-white/70 group-hover:text-[#C5A059] transition-colors" />
-                  <span className="text-xs text-white/40 group-hover:text-[#C5A059]/80 transition-colors leading-none">{label}</span>
-                </a>
-              ))}
-            </div>
-
-            {/* Horario */}
-            <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-              <h5 className="text-white/70 text-xs font-semibold uppercase tracking-widest mb-2">Horario de atención</h5>
-              <p className="text-white text-sm font-medium">Lunes – Viernes</p>
-              <p className="text-[#C5A059] text-sm font-bold">9:00 – 18:00 hrs (Chile)</p>
-              <div className="flex items-center gap-2 mt-2">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-xs text-green-400">Disponible ahora</span>
               </div>
             </div>
           </div>

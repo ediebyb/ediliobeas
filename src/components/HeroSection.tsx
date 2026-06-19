@@ -50,7 +50,7 @@ export default function HeroSection() {
           <div className="w-px h-8 bg-white/20 hidden md:block" />
           <div className="flex flex-col items-center">
             <span className="text-[#C5A059] font-bold text-sm tracking-wide">Marketing · Ventas · Gestión Digital</span>
-            <span className="text-white/50 text-xs mt-0.5">Transformación Digital · PyMEs · LATAM</span>
+            <span className="text-white/50 text-xs mt-0.5">PyMEs · LATAM · Transformación Digital</span>
           </div>
         </motion.div>
       </div>

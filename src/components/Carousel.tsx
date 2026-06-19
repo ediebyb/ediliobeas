@@ -21,7 +21,7 @@ const slides: Slide[] = [
   },
   {
     title: '¿Tu negocio vive en tu cabeza, en un Excel y en WhatsApp?',
-    subtitle: 'Ese modelo tiene un techo. Cuando pasas de 10 a 100 clientes, el caos se rompe. Yo instalo el ecosistema que escala tu operación sin depender de ti.',
+    subtitle: 'Ese modelo tiene un techo. Cuando pasas de 10 a 100 clientes, el caos inicia. Yo instalo el ecosistema que escala tu operación sin depender de ti.',
     stats: [
       { value: '+40%', label: 'ventas en 90 días (clientes reportados)' },
       { value: '15h+', label: 'recuperadas/semana por automatización' },
@@ -35,7 +35,7 @@ const slides: Slide[] = [
     subtitle: 'El 76% de las búsquedas "cerca de mí" terminan en visita ese mismo día. Si no estás en los 3 primeros resultados, no existes para ese cliente. Eso se arregla.',
     bullets: [
       'Diagnóstico digital completo de tu negocio sin costo',
-      'Identificación exacta de dónde estás perdiendo clientes',
+      'Identificación de oportunidades para llegar a nuevos clientes',
       'Plan de Acción Personalizado — en 30 minutos',
     ],
     cta: 'Agenda tu consultoría gratuita ahora',

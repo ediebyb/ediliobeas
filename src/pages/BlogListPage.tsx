@@ -69,40 +69,32 @@ export default function BlogListPage() {
                 variants={fadeInUp}
                 className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#C5A059]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#C5A059]/10 flex flex-col"
               >
+                <Link to={`/blog/${post.slug}`} className="flex flex-col flex-1 no-underline">
                 {post.image && (
                   <div className="h-48 overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
-                    />
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
                   </div>
                 )}
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="inline-flex items-center gap-1 text-xs text-[#C5A059] font-semibold">
-                      <Tag className="w-3 h-3" />
-                      {post.category}
+                      <Tag className="w-3 h-3" />{post.category}
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs text-gray-400">
                       <Calendar className="w-3 h-3" />
                       {new Date(post.date).toLocaleDateString('es-CL', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </span>
                   </div>
-                  <h2 className="text-lg font-bold text-white mb-3 line-clamp-3 leading-snug">
+                  <h2 className="text-lg font-bold text-white mb-3 line-clamp-3 leading-snug group-hover:text-[#C5A059] transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-1">
-                    {post.excerpt}
-                  </p>
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-[#C5A059] font-semibold text-sm hover:text-white transition-colors group"
-                  >
+                  <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-1">{post.excerpt}</p>
+                  <span className="inline-flex items-center gap-2 text-[#C5A059] font-semibold text-sm">
                     Leer artículo completo
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
                 </div>
+                </Link>
               </motion.article>
             ))}
           </motion.div>

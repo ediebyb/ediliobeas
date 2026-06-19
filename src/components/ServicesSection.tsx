@@ -38,7 +38,7 @@ export default function ServicesSection() {
             Ecosistemas digitales que venden por ti
           </motion.h2>
           <motion.p variants={fadeInUp} className="text-gray-600 max-w-2xl mx-auto text-lg">
-            No hablo en código, hablo en Retorno sobre la Inversión. Cada servicio está diseñado para que lo que ganas supere lo que inviertes — desde el primer mes.
+            Cada servicio está diseñado para que lo que ganas supere lo que inviertes — desde el primer mes.
           </motion.p>
         </motion.div>
 
@@ -84,7 +84,7 @@ export default function ServicesSection() {
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-6">
             <Tag size={16} className="text-brand-primary" />
-            <h3 className="text-lg font-bold text-brand-dark uppercase tracking-wide">Servicios a la carta</h3>
+            <h3 className="text-lg font-bold text-brand-dark uppercase tracking-wide">Servicios de Posicionamiento</h3>
             <div className="flex-1 h-px bg-gray-200" />
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -171,7 +171,7 @@ export default function ServicesSection() {
         >
           <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-6">
             <Tag size={16} className="text-brand-primary" />
-            <h3 className="text-lg font-bold text-brand-dark uppercase tracking-wide">Servicios estratégicos</h3>
+            <h3 className="text-lg font-bold text-brand-dark uppercase tracking-wide">Servicios Estratégicos <span className="text-[#C5A059] normal-case font-semibold">(Ofertas por Tiempo Limitado)</span></h3>
             <div className="flex-1 h-px bg-gray-200" />
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

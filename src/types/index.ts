@@ -10,6 +10,8 @@ export interface Service {
   features: string[]
   pricing: {
     note: string
+    original?: string
+    discounted?: string
     [key: string]: string | undefined
   }
   timeline: string

@@ -9,15 +9,15 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
-  // Get lowest price from pricing object
-  const getLowestPrice = () => {
-    const prices = Object.entries(service.pricing)
-      .filter(([key]) => key !== 'note')
-      .map(([_, value]) => value as string | undefined)
-      .filter((v): v is string => typeof v === 'string')
-    if (prices.length === 0) return ''
-    const lowest = prices[0]
-    return lowest.startsWith('Desde') ? lowest : `Desde ${lowest}`
+  const { pricing } = service
+  const hasDiscount = !!(pricing.original && pricing.discounted)
+
+  const displayPrice = () => {
+    if (hasDiscount) return null // handled separately
+    if (pricing.basic && pricing.basic !== 'Cotización') return pricing.basic
+    if (pricing.monthly) return pricing.monthly
+    if (pricing.basic === 'Cotización') return 'Cotización'
+    return ''
   }
 
   return (
@@ -25,49 +25,45 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       variants={cardHover}
       initial="rest"
       whileHover="hover"
-      className="p-6 hover:shadow-xl transition-shadow duration-300 bg-white rounded-xl border border-gray-100 flex flex-col h-full"
+      className="p-6 hover:shadow-xl transition-shadow duration-300 bg-white rounded-xl border border-gray-100 flex flex-col h-full relative"
     >
-      {/* Image - medium size, centered */}
-      <div className="w-full h-48 mb-4 rounded-xl overflow-hidden group-hover:shadow-lg transition-shadow duration-300">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-        />
+      {hasDiscount && (
+        <span className="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">OFERTA</span>
+      )}
+
+      {/* Icon image */}
+      <div className="w-full h-40 mb-4 rounded-xl overflow-hidden">
+        <img src={service.image} alt={service.title} className="w-full h-full object-contain" />
       </div>
 
       {/* Title */}
-      <h3 className="text-xl font-bold text-[#05121F] mb-3">
-        {service.title}
-      </h3>
+      <h3 className="text-lg font-bold text-[#05121F] mb-2 line-clamp-2">{service.title}</h3>
 
-      {/* Problem - short phrase in gold */}
-      <p className="text-sm font-bold text-[#C5A059] mb-2 drop-shadow-sm">
-        {service.problem}
-      </p>
+      {/* Problem */}
+      <p className="text-sm font-bold text-[#C5A059] mb-2">{service.problem}</p>
 
-      {/* Executive Summary - structured and uniform */}
-      <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
-        {service.executiveSummary}
-      </p>
+      {/* Summary */}
+      <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed flex-1">{service.executiveSummary}</p>
 
-      {/* Price - only lowest with "Desde" */}
-      <div className="mb-4 mt-auto">
-        <p className="text-2xl font-bold text-[#C5A059] drop-shadow-sm">
-          {getLowestPrice()}
-        </p>
-        <p className="text-xs text-gray-500 mt-1">
-          * Precio no incluye impuestos
-        </p>
+      {/* Price */}
+      <div className="mb-4">
+        {hasDiscount ? (
+          <div>
+            <span className="text-gray-400 line-through text-sm mr-2">{pricing.original}</span>
+            <span className="text-[#C5A059] font-bold text-2xl">{pricing.discounted}</span>
+          </div>
+        ) : (
+          <p className="text-2xl font-bold text-[#C5A059]">{displayPrice()}</p>
+        )}
+        <p className="text-xs text-gray-500 mt-1">* Precio no incluye impuestos</p>
       </div>
 
-      {/* Button "Ver más" - Link a página de detalle */}
       <Link
         to={`/servicios/${service.id}`}
-        className="w-full bg-[#05121F] text-white py-3 rounded-lg font-semibold hover:bg-[#0F2436] transition-colors flex items-center justify-center gap-2"
+        className="w-full bg-[#05121F] text-white py-3 rounded-lg font-semibold hover:bg-[#C5A059] transition-colors flex items-center justify-center gap-2"
         aria-label={`Ver más detalles de ${service.title}`}
       >
-        Ver más →
+        Ver más
         <ArrowRight className="w-4 h-4" aria-hidden="true" />
       </Link>
     </motion.div>
