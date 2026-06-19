@@ -8,7 +8,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-01-15',
     category: 'Marketing Digital',
     aiGenerated: true,
-    image: '/icono-google-maps.png',
+    image: '/icono-google-perfil.png',
     content: `
 <h2>El momento en que pierdes un cliente sin saberlo</h2>
 <p>Son las 8:47 PM. Un potencial cliente busca en su teléfono "restaurante cerca de mí" o "dentista en Santiago centro". Google le muestra tres opciones con fotos, reseñas y horarios. Tu negocio no aparece. Ese cliente elige uno de los tres resultados y probablemente nunca sabrás que existió.</p>
@@ -86,7 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-01-08',
     category: 'Transformación Digital',
     aiGenerated: true,
-    image: '/icono-erp.png',
+    image: '/icono-erp-crm.png',
     content: `
 <h2>La pregunta que nadie responde con honestidad</h2>
 <p>Cuando un dueño de PyME considera invertir en tecnología — sea una página web, un sistema ERP o automatización de procesos — la pregunta inevitable es: <strong>¿cuánto voy a recuperar y en cuánto tiempo?</strong> La mayoría de los proveedores de tecnología evitan responder esta pregunta con números concretos. Este artículo lo hace.</p>
@@ -176,7 +176,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2024-12-20',
     category: 'Automatización',
     aiGenerated: true,
-    image: '/icono-sheets.png',
+    image: '/icono-fabrica.png',
     content: `
 <h2>El tiempo que nunca recuperas</h2>
 <p>Según un estudio del MIT Sloan Management Review (2023), los dueños y gerentes de pequeñas empresas dedican en promedio <strong>el 40% de su semana laboral a tareas administrativas repetitivas</strong> que no generan valor directo: copiar datos entre planillas, enviar reportes manualmente, consolidar información de distintas fuentes, responder preguntas que ya están en un documento.</p>

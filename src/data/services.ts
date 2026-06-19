@@ -262,7 +262,7 @@ export const SERVICES: Service[] = [
       'Reunión mensual de revisión de resultados'
     ],
     image: '/icono-ads.png',
-    detailImage: '/ss-consultoria.png',
+    detailImage: '/ss-fabrica.png',
     cta: 'Ver más →',
     whatsappMessage: 'Hola Edilio, me interesa que gestiones mis campañas de publicidad (desde $250.000/mes). ¿Podemos hablar?'
   },

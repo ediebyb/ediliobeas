@@ -188,6 +188,16 @@ export default function ContactSection() {
 
 
 
+            {/* Imagen consultoría — prueba visual de autoridad */}
+
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <img
+                src="/ss-consultoria.png"
+                alt="Propuesta de consultoría digital — Edilio Beas"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
             {/* Disponibilidad */}
 
             <div className="bg-brand-primary/5 rounded-2xl p-6 border border-brand-primary/10">

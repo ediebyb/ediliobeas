@@ -50,7 +50,9 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="mb-12 bg-gradient-to-r from-[#C5A059]/20 to-[#C5A059]/5 border border-[#C5A059]/40 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6"
         >
-          <div>
+          <div className="flex items-center gap-4">
+            <img src="/icono-consultoria.png" alt="Consultoría gratuita" className="w-16 h-16 object-contain flex-shrink-0" />
+            <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-2xl">🎁</span>
               <span className="text-[#C5A059] font-bold text-lg uppercase tracking-wide">1ª Consultoría Gratuita</span>
@@ -58,6 +60,7 @@ export default function ServicesSection() {
             </div>
             <p className="text-brand-dark font-medium">30 minutos por WhatsApp o Google Meet — analizamos tu negocio y definimos exactamente qué necesitas.</p>
             <p className="text-gray-500 text-sm mt-1">Sin compromiso. Sin letra chica. Solo claridad sobre tu próximo paso digital.</p>
+          </div>
           </div>
           <a
             href={SETMORE_LINK}
