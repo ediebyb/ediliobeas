@@ -408,7 +408,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <p className="text-white/70 mb-4 text-lg">¿Quieres resultados así para tu negocio?</p>
+          <p className="text-white/70 mb-4 text-lg">¿Te gustaría tener resultados similares en tu negocio?</p>
           <a
             href={SETMORE_LINK}
             target="_blank"

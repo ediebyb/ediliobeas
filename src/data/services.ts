@@ -52,7 +52,7 @@ export const SERVICES: Service[] = [
       '✓ Capacitación de uso para ti y tu equipo'
     ],
     pricing: { basic: '$100.000 CLP', note: 'Precio fijo. No incluye impuestos.' },
-    timeline: '5 días hábiles',
+    timeline: '10-15 días hábiles',
     deliverables: [
       'WhatsApp Business 100% configurado',
       'Catálogo de productos/servicios publicado',
@@ -110,7 +110,7 @@ export const SERVICES: Service[] = [
       '✓ SEO básico para que Google te indexe'
     ],
     pricing: { basic: '$160.000 CLP', note: 'Precio fijo. No incluye impuestos. Dominio y hosting (~$30.000/año) no incluidos.' },
-    timeline: '7 días hábiles',
+    timeline: '15-30 días hábiles',
     deliverables: [
       'Página web profesional publicada',
       'Integración WhatsApp + formulario',
@@ -140,7 +140,7 @@ export const SERVICES: Service[] = [
       '✓ 44% de descuento — solo primeros 3 clientes/mes'
     ],
     pricing: { basic: '$255.000 CLP', note: 'Precio normal: $490.000 CLP. Ahorro: $235.000 CLP. Solo 3 cupos por mes. No incluye impuestos.' },
-    timeline: '20 días hábiles (servicios en paralelo)',
+    timeline: '25-35 días hábiles',
     deliverables: [
       'Google Perfil optimizado y verificado',
       'WhatsApp Business Pro con catálogo y plantillas',
@@ -170,7 +170,7 @@ export const SERVICES: Service[] = [
       '✓ Panel de administración de contenido autónomo'
     ],
     pricing: { original: '$550.000 CLP', discounted: '$250.000 CLP', note: 'Oferta por tiempo limitado. No incluye impuestos ni dominio/hosting.' },
-    timeline: '25 días hábiles',
+    timeline: '45-60 días hábiles estimados',
     deliverables: [
       'Sitio corporativo de 6 secciones publicado',
       'SEO técnico completo',
@@ -199,7 +199,7 @@ export const SERVICES: Service[] = [
       '✓ SEO técnico para posicionamiento en Google'
     ],
     pricing: { original: '$750.000 CLP', discounted: '$550.000 CLP', note: 'Oferta por tiempo limitado. No incluye impuestos, dominio ni hosting.' },
-    timeline: '30 días hábiles',
+    timeline: '45-60 días hábiles estimados',
     deliverables: [
       'Tienda online completa y funcional',
       'Pasarela de pagos configurada y testeada',
@@ -220,15 +220,15 @@ export const SERVICES: Service[] = [
     executiveSummary: 'Contenido mensual profesional con IA: diseño, copywriting y estrategia. Primer lote en 5 días hábiles.',
     fullDescription: 'Producción mensual de contenido con IA + estrategia de marketing. Posts, historias, carruseles y videos cortos alineados a tu marca y objetivos de venta.',
     features: [
-      '✓ 12-20 piezas de contenido profesional al mes',
+      '✓ 12 piezas de contenido hecho con IA al mes',
       '✓ Diseño gráfico alineado a tu identidad visual',
-      '✓ Copywriting orientado a venta con IA + revisión humana',
+      '✓ Copywriting orientado a venta con IA',
       '✓ Calendario editorial mensual',
       '✓ Adaptación para Instagram, Facebook, TikTok y LinkedIn',
       '✓ Reporte mensual de métricas y ajuste de estrategia'
     ],
     pricing: { original: '$200.000 CLP/mes', discounted: '$150.000 CLP/mes', note: 'Oferta por tiempo limitado. No incluye publicidad pagada.' },
-    timeline: 'Primer lote en 5 días hábiles',
+    timeline: 'Primera entrega en 7 días hábiles',
     deliverables: [
       'Calendario editorial mensual',
       '12-20 piezas listas para publicar',

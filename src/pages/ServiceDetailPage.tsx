@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate, Navigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Calendar, CheckCircle2, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react'
 import { SERVICES, POSICIONAMIENTO_IDS } from '@/data/services'
@@ -14,6 +14,15 @@ export default function ServiceDetailPage() {
   const { serviceId } = useParams<{ serviceId: string }>()
   const navigate = useNavigate()
   const [relatedIdx, setRelatedIdx] = useState(0)
+  const relatedTimer = useRef<NodeJS.Timeout | null>(null)
+
+  // Auto-rotate related services carousel
+  useEffect(() => {
+    relatedTimer.current = setInterval(() => {
+      setRelatedIdx(i => (i + 1) % Math.max(1, related.length - 2))
+    }, 3000)
+    return () => { if (relatedTimer.current) clearInterval(relatedTimer.current) }
+  }, [service?.id])
 
   const service = SERVICES.find((s) => s.id === serviceId)
   if (!service) return <Navigate to="/servicios" replace />
@@ -184,8 +193,8 @@ export default function ServiceDetailPage() {
                         <Link key={s.id} to={`/servicios/${s.id}`}
                           className="group bg-white/5 border border-white/10 hover:border-[#C5A059]/50 rounded-xl p-3 transition-all duration-200 hover:bg-[#C5A059]/10 flex flex-col items-center gap-2 text-center"
                         >
-                          <div className="w-8 h-8 bg-[#C5A059]/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <Icon className="w-4 h-4 text-[#C5A059]" />
+                          <div className="w-12 h-12 rounded-lg overflow-hidden bg-[#C5A059]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <img src={s.image} alt={s.title} className="w-full h-full object-contain p-1" />
                           </div>
                           <span className="text-white text-xs line-clamp-2 group-hover:text-[#C5A059] transition-colors leading-tight">{s.title}</span>
                         </Link>
@@ -231,8 +240,8 @@ export default function ServiceDetailPage() {
                   <Link key={s.id} to={`/servicios/${s.id}`}
                     className="group bg-white/5 border border-white/10 hover:border-[#C5A059]/50 rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-[#C5A059]/10"
                   >
-                    <div className="w-10 h-10 bg-[#C5A059]/20 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                      <Icon className="w-5 h-5 text-[#C5A059]" />
+                    <div className="w-14 h-14 rounded-xl overflow-hidden bg-[#C5A059]/10 mb-3 group-hover:scale-110 transition-transform">
+                      <img src={s.image} alt={s.title} className="w-full h-full object-contain p-2" />
                     </div>
                     <h3 className="text-white font-semibold text-sm mb-2 line-clamp-2 group-hover:text-[#C5A059] transition-colors">{s.title}</h3>
                     <p className="text-gray-400 text-xs line-clamp-2">{s.executiveSummary}</p>

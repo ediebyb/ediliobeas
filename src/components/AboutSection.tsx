@@ -14,7 +14,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
 
-          {/* Columna izquierda */}
+          {/* Left column: images */}
           <motion.div
             variants={slideInLeft}
             initial="hidden"
@@ -22,7 +22,6 @@ export default function AboutSection() {
             viewport={{ once: true, margin: '-100px' }}
             className="flex flex-col items-center gap-6 order-2 md:order-1"
           >
-            {/* Foto de perfil con badges */}
             <div className="relative">
               <img
                 src="/perfil-edie.jpg"
@@ -42,48 +41,30 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Logo oficial */}
             <img
               src="/logo_oficial_digital.png"
               alt="Edilio Beas — Consultor Digital"
               className="w-64 h-auto md:w-56 lg:w-72 rounded-3xl object-contain shadow-2xl bg-[#05121F] p-4"
             />
 
-            {/* Banner de autoridad + CTA al costado */}
-            <div className="w-full flex flex-col sm:flex-row items-center gap-4">
-              <div className="flex-1 rounded-2xl overflow-hidden shadow-lg border border-[#C5A059]/20">
-                <img
-                  src="/banner-autoridad.png"
-                  alt="Escala tu negocio y tus ingresos — Edilio Beas Consultor Digital"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="flex-shrink-0 flex justify-center">
-                <a
-                  href={SETMORE_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex flex-col items-center gap-2 px-5 py-4 bg-[#05121F] text-white font-semibold rounded-xl hover:bg-[#C5A059] transition-all duration-200 shadow-lg text-center text-sm border border-[#C5A059]/30"
-                >
-                  <Calendar size={20} aria-hidden="true" />
-                  Agenda tu<br />Consultoría<br />Gratuita
-                </a>
-              </div>
+            <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-[#C5A059]/20">
+              <img
+                src="/banner-autoridad.png"
+                alt="Escala tu negocio y tus ingresos — Edilio Beas Consultor Digital"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </motion.div>
 
-          {/* Contenido */}
+          {/* Right column: text + CTA at bottom */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
-            className="space-y-4 md:space-y-3 order-1 md:order-2"
+            className="flex flex-col space-y-4 md:space-y-3 order-1 md:order-2"
           >
-            <motion.span
-              variants={fadeInUp}
-              className="inline-block text-brand-primary font-semibold text-sm uppercase tracking-wider"
-            >
+            <motion.span variants={fadeInUp} className="inline-block text-brand-primary font-semibold text-sm uppercase tracking-wider">
               Sobre mí
             </motion.span>
 
@@ -104,6 +85,19 @@ export default function AboutSection() {
                   {paragraph}
                 </p>
               ))}
+            </motion.div>
+
+            {/* CTA — full width rectangular, below all text */}
+            <motion.div variants={fadeInUp} className="pt-4">
+              <a
+                href={SETMORE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-[#05121F] text-white font-bold rounded-xl hover:bg-[#C5A059] transition-all duration-200 shadow-lg hover:shadow-[#C5A059]/30 text-base border border-[#C5A059]/30"
+              >
+                <Calendar size={20} aria-hidden="true" />
+                Agenda tu 1ª Consultoría Gratuita — Es gratis
+              </a>
             </motion.div>
           </motion.div>
 

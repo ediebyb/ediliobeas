@@ -113,13 +113,14 @@ export default function Navigation() {
               }
               setIsMenuOpen(false)
             }}
-            className="flex items-center"
+            className="flex items-center p-1 rounded-xl hover:ring-1 hover:ring-[#C5A059]/40 transition-all"
             aria-label="Edilio Beas - Ir al inicio"
           >
             <img
               src="/logomini.png"
               alt="Edilio Beas — Consultor Digital"
-              className="h-12 w-auto rounded-lg"
+              className="h-12 w-auto"
+              style={{ background: 'transparent', mixBlendMode: 'normal' }}
             />
           </Link>
 
@@ -131,9 +132,20 @@ export default function Navigation() {
 
             {NAV_LINKS.map((link) => {
               const isPageRoute = link.href.startsWith('/') && !link.href.startsWith('/#')
-              const isActive = isPageRoute
-                ? location.pathname.startsWith(link.href)
-                : activeSection === link.href.replace('#', '')
+              // Detect active: page routes by pathname, hash routes by scroll spy
+              // Also mark /servicios active when on any /servicios/* route
+              // Also mark /blog active when on any /blog/* route
+              let isActive = false
+              if (link.href === '/blog') {
+                isActive = location.pathname.startsWith('/blog')
+              } else if (link.href === '/servicios' || link.href === '#servicios') {
+                isActive = location.pathname.startsWith('/servicios') ||
+                  (!isPageRoute && activeSection === 'servicios')
+              } else if (isPageRoute) {
+                isActive = location.pathname.startsWith(link.href)
+              } else {
+                isActive = activeSection === link.href.replace('#', '')
+              }
 
               return (
 
